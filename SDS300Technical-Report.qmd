@@ -1,0 +1,459 @@
+---
+title: "Investigating the Impact of Monetary Rewards on Choice Behavior, Decision Making and Risk Management"
+author: "Michel Ruiz-Fuentes | Smith College"
+format: pdf
+editor: visual
+date: "`r Sys.Date()`"
+---
+
+**Keywords**: behavioral and cognitive science, external stimuli, internal emotions, behavioral biases, interoceptive ability, dopamine reward pathway, loss aversion
+
+# Abstract
+
+In my final project in SDS 300: Topics in SDS Applications in Neuroscience and Psychology, I will focus on understanding risk decisions and the implications for financial professionals such as investors, traders, or brokers. I am using the Choices13K dataset, an open data source retrieved from GitHub that is among the largest human decision response on risk-choice problems datasets with at least 13,000 responses. In this study, the participants participated in a series of experiments where they faced two options to gamble: a risk-averse or risk-seeking option. Each option had a different set of possible outcomes. For example, if they chose Option A, there was a certain probability of a 100% chance of a \$0 return (risk-averse); however, if they chose Option B, there was a lottery outcome with a. 50-50% chance of winning or losing \$100 (risk-seeking). My research question studies if and how participants' responses contrast with the risky-choice problem when there are known probabilities (certainty) versus unknown probabilities (ambiguity and lottery). 
+
+I use neuroscience, psychology, and neurobiology to investigate the underlying biological and social mechanisms that impact decision-making and confidence in financial risk management. For the neuroscience research, I investigated how desire activates our neural reward system and dopamine system, which influences the processes for decision-making in the limbic system and neocortex. Then in the psychology discipline, I researched behavioral biases and behavioral finance protocols under the CFA (Chartered Financial Analyst non-profit) to observe how emotions and pleasure-seeking approach vs. loss aversion approach impact decision-making. And lastly, in my research within the neurobiology field, I studied interoceptive abilities and genetics, such as testosterone, and how the levels of each explain the nuances of financial decision-making. In my methodology, I perform a t-test, logistic regression, and multiple logistic regression to respond to my research question, and this is still in progress. 
+
+# Introduction
+
+### [**Background:**]{.underline}
+
+What factors influence whether we become risk-averse, risk-seeking, or risk-neutral individuals? Risk-averse individuals seek low-risk investments to preserve capital. Risk-seeking individuals seek investments with a higher or unlimited degree of risk in hopes of producing a strong return. If we become informed about the various factors that shape our risk tolerance, can this understanding improve our judgment and decision-making skills? In this research design, I investigate the factors that influence decision-making and run statistical tests on a risky-choice dataset to test my hypothesis.
+
+The risky-choice framing effect was coined by psychologists Daniel Kahneman and Amos Tversky. They studied judgment and decision-making. Judgment is the estimation (or guessing) of magnitudes and probabilities, while decision-making is how we choose under uncertainty. Kahneman and Tversky studied the ways that humans responded to a series of risky-choice problems and discovered that risk perception played an instrumental role in influencing the participant's choice. For example, if one gamble was framed positively for having a gain outcome, the subject preferred a risk-averse option. On the other hand, if another gamble was framed negatively for having a potential loss, the subject preferred a risk-seeking option. Individuals make choices dependent on the degree of risk involved, so my literature review is a multi-disciplinary analysis of this phenomenon across a range of fields of study.
+
+### [**Neuroscience:**]{.underline}
+
+Neuroscience research indicates that several brain regions, such as the frontal lobe and the limbic system, and the dopamine reward system are critical brain structures that help individuals rationalize the potential for gain or loss from a gamble. Decision-making is a neural process, so comprehending the brain's role begins at the fundamental level of understanding how each section of the brain is connected and communicates with each other via neurons. Neurons are responsible for sending and communicating information with different regions of the brain. Glial cells support the nervous system by maintaining the neurons through structural supports, nutrients, and cleaning waste matter. The types of decisions and risks associated in with a task will trigger certain neurons within the frontal lobe and limbic system to activate. Kahneman's book, "Thinking Fast and Slow" differentiates two operating systems in the brain for decision making as system 1 and system 2. 
+
+System 1 is composed of the limbic system consisting of the amygdala and hypothalamus. System 1 is fast and characterized by automatic, preconscious, driven by emotions and association, effortless, and with less self-awareness or control. It directs ninety-eight percent of all our thinking. The limbic system is primitive and vital to the heritage that has helped generations of humanity survive for generations. Because the limbic system is emotionally motivated, this sometimes indicates why individuals are more inclined to choose immediate gratification and make decisions based on the short term. 
+
+The amygdala is responsible for recognizing emotions such as pleasure and fear, so it is also critical to navigating and responding appropriately to social interactions. Wet lab experiments concerning the amygdala often test for changes in the expression and perception of fear. Damage to the amygdala looks like patients struggling with recognizing emotions and automatic responses to reward and punishment. In an experiment concerning monetary gain or loss, a participant with damage to the amygdala will have trouble learning and remembering which gambles they should avoid due to being disadvantageous or less desirable, while healthy participants are aware of which gamble, they should choose to retain a reward. The hypothalamus helps the body maintain homeostasis, a stable state by managing hormones and serving as the connection between the endocrine and nervous systems. The hypothalamus manages breathing, sleep patterns, blood pressure, drive, body temperature, and other bodily functions that require control and balance. Damages to the hypothalamus will interfere with the body's internal balance and everyday functions.
+
+System 2 is composed of the neocortex which is divided into four regions: frontal, parietal, occipital, and temporal. System 2 is slow and characterized by rational and logical thinking, sequential, conscious, skepticism, and self-awareness. It directs two percent of all our thinking. System 2 is informed by System 1, and System 2 converts this into beliefs so we use both operating systems to create a final judgment.
+
+The frontal lobe makes up 25-40% of the brain's cerebral cortex. It helps us fulfill task sets and manages a variety of abilities: reasoning, social understanding, executive functions, voluntary muscle movements, and learning. The frontal lobe supports through reasoning goal-oriented behavior such as solving problems, thinking, judging, executing a plan, and anticipating the consequences of a plan. The application of the frontal lobe in risk management is that inquiring about the longevity and future implications of one, allows an individual to develop protocols and habits for decision-making based on their previous experiences making choices. This region is also crucial for learning in terms of memory and the creation, storage, and retrieval of knowledge. It supports executive functions such as self-control or attention, and social understanding which consists of social norms, ethics, and right versus wrong. The frontal lobe is not directly correlated to all decision-making, but this task will activate certain regions depending on the context and type of risk. Damage to the frontal lobe can hinder higher-level reasoning and decision-making and there is still much research to be completed to explore how the frontal lobe plays a role in decision-making under uncertainty or environmental situations that include changes or open-mindedness.
+
+The dopamine reward system is a crucial system that drives behavior toward pleasurable stimuli and steers us away from painful stimuli. When we learn which, actions receive a positive stimulus and repeat that action it is called reinforcement. Therefore, the reward system captures our emotions and reinforces whether we continue to perform or stop performing an action. The reward system operates on dopamine, a chemical neurotransmitter that mediates pleasure and neurochemical that drives us to start or repeat actions for a reward. One of the most important reward circuits is the mesolimbic pathway, which is a central nervous system pathway activated during rewarding brain stimulation involving the amygdala, amygdala, hypothalamus, and nucleus accumbens. Therefore, various brain regions work cohesively to mediate the desire to act on rewarding behaviors, and the release of dopamine.
+
+### [**Psychology:**]{.underline}
+
+Next, will be an analysis of the psychological basis of judgment and how behavioral biases and our emotions affect decision-making. We will study this judgment protocol based on investor behaviors since their careers involve making constant decisions that either result in a monetary gain or loss. Behavioral biases refer to individuals making decisions based on factors and/or beliefs they subconsciously possess or have heard of which therefore affects their ability to choose rationally. Researchers across social sciences, economics, psychology, etc. all categorize these biases in unique ways; sometimes into two, five, or seven categories. The CFA Institute, a non-profit educational organization that trains investment professionals groups behavioral biases into two divisions: cognitive errors and emotional biases. Cognitive errors refer to faulty reasoning which stems from individuals having memory errors, emotional biases refer to reasoning that is influenced by feelings and intuition. Because emotional biases stem from an internal impulse, they are more challenging to separate in decision-making compared to cognitive errors. If behavioral biases refer to the unconscious (cognitive or emotion-based) beliefs that influence our decisions, what is the utility of this phenomenon for investors?
+
+Behavioral finance studies the psychological influences and biases of behaviors that affect financial professionals such as investors. It is a relatively new study of thinking, merging psychology and biology. Prior to the 1960s, economists believed humans behave logically; however, history across multiple disciplines indicates this to be false. Despite having data and evidence to suggest an outcome, we sometimes act against that knowledge. An article published by Morgan Stanley in Jan 2023 titled, "Rational Investing in an Age of Uncertainty" questions how even the savviest of investors fall prey to bias and emotional trades. Behavioral finance tackles these questions and has the potential to explain market anomalies such as the stark increase or drops in stock prices. Understanding cognitive error and emotional biases also informs investors about the factors that cloud their judgment, and may serve as a tool to create more conscious and critical investors, but how does behavioral finance achieve this? 
+
+Behavioral finance introduces psychological frameworks as evidence to demonstrate how humans are not ultimately always rational. These frameworks include the loss aversion or reward approach. The reward approach observes how gain is enticing and thereby a pleasure-seeking option, while loss aversion is a pain avoidance framework that weighs loss to be more painful and ultimately perceives it as a form of punishment. Loss aversion is a strong emotion because it induces anxiety, stress, and fear of loss and you may notice this within yourself if you tend to observe your setbacks more than your progress. Those individuals might also agree with Kahneman who described losses as hurting twice as much as gains making us feel pleasure. Loss aversion shapes higher sensitivity to loss in comparison to risk-averse individuals that are less sensitive to choosing under uncertainty of gain or less. 
+
+On the other hand, the reward approach is a natural process in the brain that associates stimuli such as situations, events, or behaviors with a desirable outcome and is known as the pleasure-seeking option. Although this creates more risk-averse individuals that chase the stimuli that produce positive outcomes, their judgment can be impaired if they are associated the stimuli with a desired outcome based on cognitive errors or emotional biases that are not grounded in evidence. The reward approach and loss aversion framework are two systems that influence investor behavior. Their psychological biases influence decision-making, so understanding them can help investors separate cognitive errors and emotional biases from making rational decisions, as well as allow them to identify if they operate using a loss-aversion or reward approach more frequently, or both depending on the object being risked whether it be money, another intangible or intangible such as risking time.
+
+### [**Neurobiology:**]{.underline}
+
+The psychological basis of behavioral biases shows that emotions play an integral part in rational decision-making, and emotions trigger a changing heartbeat. Boussaert's piece, "How Neurobiology Elucidates the Role of Emotions in Financial Decision-Making," suggests that studying decision-making based on the biology of behaviors will debunk misconceptions about the role of emotions and explore features that are not traditionally considered when observing human choices. Neurobiology, merges physiology and neuroscience, by studying the nervous system and brain, and the biological mechanisms that mediate behavior. In Boussaert's research, neurobiology uses underlying biological mechanisms to explain feelings that arise during judgment and decision-making, such as going with your "intuition" or "gut feeling" using interception. Interoception refers to the ability to identify, interpret and respond to internal physiological signals such as pain, hunger, and in this case, heartbeat. 
+
+Possessing interoceptive abilities suggests the person shows high levels of consciousness to their body's internal landscape and research Boussaert's demonstrates that traders that cannot sense their heartbeat and control their emotions in high-risk settings are at risk of underperforming, while traders that could sense their heartbeat and control their emotions that consequently affected their heartbeat were better traders than the large population. Therefore, they positively correlated levels of interoceptive ability with performance profits/loss and job tenure and produces takeaways such as traders that can sense their heartbeat are better at making capital. 
+
+Another physiological factor that corresponds to investor behavior, financial decision-making, and success rates is genetics due to their biological functions. For example, testosterone is a hormone responsible for producing sex and reproductive characteristics in men that and contrasts in muscle density, body hair, bone size, etc. Both sexes produce this androgen, but men produce it at higher levels, and testosterone is converted into estrogen in women. However, 6% to 10% have high levels of testosterone and have polycystic ovary syndrome (PCOS) which is characterized by having symptoms such as irregular or no periods, excessive hair growth, and other traits. Testosterone is also associated with aggression, competitiveness, and risk-taking, and more testosterone is associated with greater risk-taking. 
+
+Studying the notion of financial decisions and risk management is interconnected, so observing the correlations between levels of testosterone and behavioral biases alludes to the ways that sex may impact risk appetite. Additionally, in another study about financial risk and testosterone levels by Apicella, the researchers found that levels of testosterone were associated with greater risk-taking, so having a greater risk tolerance can influence longevity, success rate, and opportunities in a career if the individual is more willing to take the chances under uncertainty. The following multidisciplinary research concludes that understanding the nuances of financial decisions and risk management requires considering the interplay between neural networks, behavioral biases, emotions, and biology.
+
+# Methodology
+
+### [**Research Question:**]{.underline}
+
+How do the participant's responses to the risky-choice problem contrast with known probabilities (certainty) versus unknown probabilities (ambiguity and lottery)? 
+
+### [**Hypothesis:**]{.underline}
+
+Null Hypothesis states there is no difference in the mean rate of participants choosing either Option A or Option B depending on whether they receive feedback. The true difference between the group means is equal to zero.
+
+Alternative Hypothesis states there is a difference in the mean rate of participants choosing either Option A or Option B depending on whether they receive feedback. The true difference between the group means is different from zero.
+
+Based on the literature, I believe there will be a difference in the mean rate of participants choosing either Option A or Option B depending on whether they receive feedback. Kahneman and Tversky's research on decision-making and risk perception indicates that the feedback and perception used to frame Options A and B influence the participant's choice.
+
+For example, if one gamble was framed positively for having a gain outcome, the subject preferred a risk-averse option. On the other hand, if another gamble was framed negatively for having a potential loss, the subject preferred a risk-seeking option.
+
+### [**Data set:**]{.underline}
+
+```{r, echo = FALSE, warning=F, message=F}
+#LOADING_PKGE
+library(tidyverse)
+library(rio)
+library(asbio)
+library(tidyr)
+library(ggplot2)
+library(ggpubr)
+library(car)
+```
+
+```{r, warning=F, message=F}
+#LOADING_DATA
+choices_df <- import("choices13k_dataset.xlsx")
+```
+
+The [Choices13k data set](https://github.com/jcpeterson/choices13k) was collected by Joshua C. Peterson, David D. Bourgin, Mayank Agrawal, Daniel Reichman, and Thomas L. Griffins and published on GitHub. In this study, participants engaged in a series of risky-choice problems. 
+
+Choices13k is among the largest human decision rates on risky-choice problems datasets, with at least 13,000 responses. In this study, participants participated in a series of experiments where they faced two options to gamble: a risk-averse or risk-seeking option. Each option had a different possible outcome. Therefore, if they chose Option A, there was a certain probability of a 100% chance of \$0. However, if they chose Option B, there was a lottery outcome of a 50-50 chance of winning or losing \$100.
+
+This dataset was used to build quantitative models in machine learning to predict human behavior. However, due to the complexity of many factors (neuroscience, psychology, neurobiology, etc.) that underly decision-making, the researchers had a challenging time building a model that accurately predicts human judgment. Therefore, because the project utilizes statistical methods to better understand how feedback and certainty impact decision-making, this is not a replication study of the original researchers who focused on using Choices13K for machine learning purposes.
+
+### [**Ethical Considerations:**]{.underline}
+
+### [**Data Cleaning:**]{.underline}
+
+During this stage of data preprocessing, I checked for missing values, removing, or correcting any errors/inconsistencies, and data types. However, because this data was used for a machine-learning project, the data is relatively accessible and clean, and I will be using it for statistics and results purposes.  
+
+### [**Variables of Interest:**]{.underline}
+
+![Choices 14k Dataset Variables](sds300-table.jpg){alt="Choices 14k Dataset Variables"}
+
+\newpage
+
+# **Statistical Methods**
+
+### [T-Test:]{.underline}
+
+In a t-test, the researcher determines if there is a significant difference between the means of the two groups. This test calculates a t-value and compares this to the critical value to show if the difference is statistically significant. I will use a t-test to assess if there is a statistically significant difference in the frequency rate of choosing Option B (`bRate`) dependent on the information (`Amb`) or feedback (`Feedback`) provided. Therefore, if there is no significant difference, then `Amb` and `Feedback` do not have statistically significant explanatory power. In other words, the `bRate` will not change based on the information (`Amb`) or feedback (`Feedback`) provided. 
+
+### [Box plot:]{.underline}
+
+Because I will a t-test to compare group means, the box plot will help visualize the distribution of the data and any potential outliers or skewness. It will also be used to demonstrate the distribution of probabilities for Gambles A and B, with separate boxes for each. Use box plots to visualize the distribution of the outcome variable (bRate) across different levels of a categorical variable (e.g., feedback, Amb) to check for differences in means.
+
+### [Logistic Regression:]{.underline}
+
+Researchers use logistic regression plots to visualize the relationship between the predictor variables (e.g., feedback, Amb) and the binary outcome variable (the chosen Gamble) to check for significant effects and to interpret the odds ratios.
+
+### [**Levene's Test:**]{.underline} 
+
+Levene's test is designed to test a hypothesis, so a large p-value indicates that we fail to reject the null and the groups have homogeneity. This is evidence that the population variances are not significantly different, and we have constant variance among the groups.
+
+### [**Histogram:**]{.underline} 
+
+Use histograms to visualize the distribution of each variable (Ha, Hb, pHa, pHb, bRate, Lb, LotShapeB, LotNumB) to check for normality assumptions.
+
+### [**Probability Density Plot:**]{.underline} 
+
+If you use logistic regression to assess the impact of various independent variables on the likelihood of choosing Gamble A or B, a probability density plot could be a useful visualization to display the distribution of predicted probabilities for each choice. This could help to illustrate any differences in the distribution of predicted probabilities between the two choices.
+
+### [**Heat Map:**]{.underline} 
+
+Use heat maps to visualize the relationship between two categorical variables (e.g., feedback and the chosen Gamble) to check for any patterns or associations.
+
+### [**Correlation Matrix Plot:**]{.underline} 
+
+Use a correlation matrix plot to visualize the pairwise correlations between all continuous variables in the data set to check for multicollinearity.
+
+\newpage
+
+# **Results**
+
+The results section will consist of multiple statistical tests and data visualizations.
+
+### [**T-Test for `bRate` and `Feedback`:**]{.underline}
+
+Utilizing a t-test to assess if there is a statistically significant difference between the mean **`bRate`** \[the frequency of choosing Option B\] between the the true and false groups of whether the participants received **`Feedback`** on the outcome.
+
+The p-value is above 0.8441, so we fail to reject the null hypothesis which states there is no difference in the frequency with which participants select **`bRate`** depending on their treatment of whether they had **`Feedback`** about the outcomes.
+
+Additionally, the confidence interval shows that we are 95% that our true population parameter falls within \[-0.011334634, 0.007675331\]. This confidence interval includes zero which demonstrates that the true population parameter could be zero and the mean frequency rate of choosing Option B would be the same regardless of the **`Feedback`** about the outcome.
+
+```{r, warning=F, message=F}
+# Running a t-test for bRate and Feedback
+choices_df$Feedback <- as.factor(choices_df$Feedback)
+t.test(bRate~Feedback, data=choices_df)
+```
+
+\newpage
+
+### [**Condition Checks for `bRate` and `Feedback`:**]{.underline}
+
+[**Symmetrical Distribution around Group Means**]{.underline}:
+
+The box-plot below shows us the distribution of the average `bRate` on the different levels of `Feedback` of true or false. We will compare the variation in the interquartile ranges of each treatment. We can see that this condition is not violated, when looking at the spread in the false and true group are the same. There is also an absence of outliers so we have not violated these normality assumptions.
+
+By looking at the plot, we can see that the constant variance condition is not violated. We have constant variance across the true and false groups. However, checking conditions with visualizations can be tricky, so we can refer to Levene's test to also check our constant variance condition.
+
+```{r, warning=F, message=F, fig.height=2.5}
+# Creating a boxplot visualization for bRate and Feedback
+bRate_feedback <-
+  ggplot(data=choices_df, aes(x=bRate, color=Feedback)) + 
+  geom_boxplot() + 
+  labs(title ="Frequency of Option B ('gamble') Box Plot",
+      subtitle= "Assessing Distribution by Feedback Level",
+      caption ="source: Choices13K") +
+  xlab("Probability of Option B (0-impossible, 1-certain)") +
+  ylab ("Feedback Rate") 
+bRate_feedback
+```
+
+[**Constant Variance:**]{.underline}
+
+After conducting Levene's test of homogeneity of variance, we see that our p-value of 0.2869 is greater than 0.05. This means that we do not have statistically significant evidence that we have different variances, therefore constant variance condition is not violated. Therefore, Levene's test indicates that the condition of equality of variances has homogeneity, so each level of information, false and true, has the same variance.
+
+```{r, warning=F, message=F}
+# Levene's Test
+leveneTest(bRate~Feedback, data=choices_df) 
+```
+
+Because neither the symmetric conditions around group means, normal distribution nor constant variance has been violated, we do not need to perform the non-parametric method, Wilcoxon Man Whitney Test.
+
+### [**One-Way ANOVA for `bRate` and `Feedback`:**]{.underline}
+
+Because our p-value for `Feedback` is 0.713 (greater than 0.05), and we have a small F-statistic of 0.1354635 we do not have statistically significant evidence that the `bRate` is different based on the `Feedback` received. We do not have a main effect for `Feedback`.
+
+```{r, warning=F, message=F}
+# Run one-way ANOVA against feedback
+choices_df$Feedback <- as.factor(choices_df$Feedback)
+feedback_anova <- aov(bRate ~ Feedback, data = choices_df)
+
+# Summarize ANOVA results
+summary(feedback_anova)
+f_statistic <- summary(feedback_anova)[[1]][["F value"]][1]
+p_value <- summary(feedback_anova)[[1]][["Pr(>F)"]][1]
+
+# Print F-statistic and p-value
+cat("F-statistic =", f_statistic, "\n")
+cat("p-value =", p_value, "\n")
+```
+
+### [**T-Test for `bRate` and `Amb`:**]{.underline}
+
+Utilizing a t-test to assess if there is a statistically significant difference between the mean `bRate` \[the frequency of choosing Option B\] depending on the `Amb`. This refers to the differences between the true and false groups of whether the participants received complete information or no information about the probabilities of the outcomes in Option B. 
+
+The p-value is above 2.2e-16 which is below 0.05, so we reject the null hypothesis which states there is no difference in the frequency with which participants select `bRate` depending on their treatment of whether they had received no information or complete information about the probabilities of the outcomes in Option B.
+
+Additionally, our confidence interval shows that we are 95% that our true population parameter falls within \[0.5090787, 0.5582683\] and does not include zero. This demonstrates that the true population parameter will not be equal to zero and the mean frequency rate of choosing Option B is statistically different based on `Amb` or the amount of information (none of complete) provided about the probabilities of each outcome occurring in Option B. 
+
+```{r, warning=F, message=F}
+# Running a t-test for bRate and Amb
+choices_df$Amb <- as.factor(choices_df$Amb)
+t.test(bRate~Amb, data=choices_df)
+```
+
+[**Symmetrical Distribution around Group Means**]{.underline}:
+
+The box-plot below shows us the distribution of the average `bRate` on the different levels of `Amb` of true or false which represent whether participants received complete or no information about their gambles before choosing the option. We will compare the variation in the interquartile ranges of each treatment. We can see that this condition is not violated, when looking at the spread in the false and true group are the same. There is also an absence of outliers so we have not violated these normality assumptions.
+
+By looking at the plot, we can see that the constant variance condition is not violated. We have constant variance across the true and false groups. However, checking conditions with visualizations can be tricky, so we can refer to Levene's test to also check our constant variance condition.
+
+```{r, warning=F, message=F, fig.height=2.5}
+# Creating a boxplot visualization for bRate and Feedback
+bRate_Amb <-
+  ggplot(data=choices_df, aes(x=bRate, color=Amb)) + 
+  geom_boxplot() + 
+  labs(title ="Frequency of Option B ('gamble') Box Plot",
+      subtitle= "Assessing Distribution by Information Level",
+      caption ="source: Choices13K") +
+  xlab("Probability of Option B (0-impossible, 1-certain)") +
+  ylab ("Frequency Rate") 
+bRate_Amb
+```
+
+[**Constant Variance:**]{.underline}
+
+After conducting Levene's test of homogeneity of variance, we see that our p-value of 0.5232 is greater than 0.05. This means that we do not have statistically significant evidence that we have different variances, therefore constant variance condition is not violated. Therefore, Levene's test indicates that the condition of equality of variances has homogeneity, so each level of information, false and true, has the same variance.
+
+```{r, warning=F, message=F}
+# Levene's Test
+leveneTest(bRate~Amb, data=choices_df)
+```
+
+### [**One-Way ANOVA for `bRate` and `Amb`:**]{.underline}
+
+Because our p-value for `Amb` is 2e-16\*\*\* (less than 0.05), and we have a large F-statistic of 112.4 and have statistically significant evidence that the `bRate` is different based on the `Amb` (informed level) received. We there have main effect for `Amb`.
+
+```{r, warning=F, message=F}
+# Run one-way ANOVA against information 
+info_anova <- aov(bRate ~ Amb, data = choices_df)
+
+# Summarize ANOVA results
+summary(info_anova)
+
+# Extract F-statistic and p-value
+f_statistic <- summary(info_anova)[[1]][["F value"]][1]
+p_value <- summary(info_anova)[[1]][["Pr(>F)"]][1]
+
+# Print F-statistic and p-value
+cat("F-statistic =", f_statistic, "\n")
+cat("p-value =", p_value, "\n")
+```
+
+### [**Probability Density Plot:**]{.underline}
+
+```{r, warning=F, message=F}
+# # Assuming you have a logistic regression model "logit_model" predicting the binary outcome variable "choice"
+# # Extract the predicted probabilities for each choice
+# probs <- predict(logit_model, type = "response")
+# 
+# # Create a density plot for each choice
+# ggplot(data.frame(probs = probs, choice = choice), aes(x = probs, fill = choice)) +
+#   geom_density(alpha = 0.5) +
+#   scale_fill_manual(values = c("#F8766D", "#00BFC4"), name = "Choice") +
+#   xlab("Predicted probability") +
+#   ylab("Density") +
+#   ggtitle("Distribution of predicted probabilities for each choice")
+
+```
+
+### [**Heat Map:**]{.underline}
+
+```{r, warning=F, message=F}
+# Assuming you have a data frame "df" with two categorical variables "feedback" and "choice"
+# # Use the "table" function to create a contingency table of frequencies
+# freq_table <- table(df$feedback, df$choice)
+# 
+# # Create a heat map using the "ggplot2" package
+# library(ggplot2)
+# ggplot(data.frame(freq_table), aes(x = Var1, y = Var2, fill = Freq)) +
+#   geom_tile() +
+#   scale_fill_gradient(low = "#FFFFFF", high = "#0072B2") +
+#   xlab("Feedback") +
+#   ylab("Choice") +
+#   ggtitle("Heat map of frequencies by feedback and choice")
+
+```
+
+### [**Correlation Matrix Plot:**]{.underline}
+
+```{r, warning=F, message=F}
+# # Assuming you have a data frame "df" with several continuous variables
+# # Use the "cor" function to calculate the pairwise correlations between variables
+# corr_matrix <- cor(df)
+# 
+# # Create a correlation matrix plot using the "corrplot" package
+# library(corrplot)
+# corrplot(corr_matrix, method = "circle", type = "upper", tl.col = "black", tl.srt = 45,
+#          addCoef.col = "black", number.cex = 0.8, tl.cex = 0.8,
+#          title = "Pairwise correlations between continuous variables")
+```
+
+[**Option A:**]{.underline}
+
+```{r, echo = FALSE, warning=F, message=F}
+prob_pHa <-
+  ggplot(data=choices_df, aes(x=pHa)) + 
+  geom_histogram(bins =10) + 
+  labs(title ="Probability of the First Outcome",
+      subtitle= "Distribution Plot of Option A",
+      caption ="source: Choices13K") +
+  xlab("Probability in Option A (0-impossible, 1-certain)") +
+  ylab ("Occurances Count") 
+prob_pHa
+```
+
+```{r, echo = FALSE, warning=F, message=F}
+prob_La <-
+  ggplot(data=choices_df, aes(x=La)) + 
+  geom_histogram(bins =10) + 
+  labs(title ="Probability of the Second Outcome",
+      subtitle= "Distribution Plot of Option A",
+      caption ="source: Choices13K") +
+  xlab("Probability in Option A") +
+  ylab ("Occurances Count") 
+prob_La
+```
+
+```{r, echo=FALSE, warning=F, message=F}
+
+choicepHa_histogram <- ggplot(choices_df, aes(x=pHa)) +
+  geom_histogram(bins =20) +
+  ggtitle ("Distribution of 1st Outcome in Option A") +
+  xlab ("Probability of Occurence  (0- will not | 1- certain)") +
+  ylab ("Count of Outcome 1 in A")
+
+choicepHa_histogram
+```
+
+```{r, echo = FALSE, warning=F, message=F}
+# Boxplot of pHa by feedback
+pHa_boxplot <- 
+  boxplot(pHa ~ Feedback, data=choices_df, 
+          main="Boxplot of pHa by Feedback", 
+          xlab="Feedback", ylab="pHa")
+pHa_boxplot
+
+summary(choices_df$pHa)
+```
+
+[**Option B:**]{.underline} *Histograms: Use histograms to visualize the distribution of each variable (Ha, Hb, pHa, pHb, bRate, Lb, LotShapeB, LotNumB) to check for normality assumptions.*
+
+```{r, echo = FALSE, warning=F, message=F}
+prob_pHb <-
+  ggplot(data=choices_df, aes(x=pHb)) + 
+  geom_histogram(bins =10) + 
+  labs(title ="Probability of the First Outcome",
+      subtitle= "Distribution Plot of Option B",
+      caption ="source: Choices13K") +
+  xlab("Probability in Option B (0-impossible, 1-certain)") +
+  ylab ("Occurances Count") 
+prob_pHb
+```
+
+```{r, echo = FALSE, warning=F, message=F}
+prob_Lb <-
+  ggplot(data=choices_df, aes(x=Lb)) + 
+  geom_histogram(bins =10) + 
+  labs(title ="Probability of the Second Outcome",
+      subtitle= "Distribution Plot of Option B",
+      caption ="source: Choices13K") +
+  xlab("Probability in Option B") +
+  ylab ("Occurances Count") 
+prob_Lb
+```
+
+```{r, echo=FALSE, warning=F, message=F}
+
+choiceB_histogram <- ggplot(choices_df, aes(x=pHb)) +
+  geom_histogram(bins =20) +
+  ggtitle ("Histogram of the Probability of Option B") +
+  xlab ("Probability of Occurence  (0- will not, 1- certain)") +
+  ylab ("Count")
+
+choiceB_histogram
+```
+
+```{r, echo = FALSE, warning=F, message=F}
+# Boxplot of pHb by LotShapeB
+pHb_boxplot <- 
+  boxplot(pHb ~ LotShapeB, data=choices_df, 
+          main="Boxplot of pHb by LotShapeB", 
+          xlab="LotShapeB", ylab="pHb")
+pHb_boxplot
+```
+
+### [**Logistic Regression:**]{.underline}
+
+```{r, warning=F, message=F}
+# create logistic regression model for feedback and pHa
+# feedback_model <- glm(Feedback ~ pHa, data = choices_df, family = binomial())
+# 
+# # create logistic regression plot
+# ggplot(choices_df, aes(x = pHa, y = Feedback)) +
+#   geom_point(aes(color = as.factor(Feedback)), size = 2.5) +
+#   stat_smooth(method = "glm", method.args = list(family = "binomial"), se = FALSE, size = 1.2, color = "black") +
+#   scale_color_manual(values = c("#00BFC4", "#F8766D")) +
+#   theme_minimal()
+```
+
+```{r, echo=FALSE, warning=F, message=F}
+# # Fit a logistic regression model to pred  ict choice (0 = A, 1 = B) based on Ha
+# pHa_model <- glm(Feedback ~ pHa, data = choices_df, family = binomial())
+# # Print the model summary
+# summary(pHa_model)
+```
+
+```{r, echo=FALSE, warning=F, message=F}
+# # Fit a logistic regression model to predict choice (0 = A, 1 = B) based on Ha
+# pHb_model <- glm(Amb~ pHb, data = choices_df, family = binomial())
+# # Print the model summary
+# summary(pHb_model)
+```
+
+# Discussion
+
+# Future Directions:
+
+# Personal Reflections:
+
+# Code Availability
+
+# Acknowledgements
