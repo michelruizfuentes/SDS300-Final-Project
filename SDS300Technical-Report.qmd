@@ -100,9 +100,15 @@ This dataset was used to build quantitative models in machine learning to predic
 
 ### [**Ethical Considerations:**]{.underline}
 
-The replication crisis refers to a lack of reproducibility in experimental designs and the scientific method. For example, say one investigator is trying to repeat the research design of another scientist, but they cannot produce the same results as the original study. The replication crisis occurs due to inconsistencies and manipulations that are not reported throughout the study. As a result, they produce misleading and sometimes favorable results that are not indicative of the true results of the experiment. However, to solve this issue, researchers can pre-register their study. Preregistration refers to a set of protocols that support "open science," which is reproducible, accessible, transparent, and rigorous. Overall these "open science" principles allow for best and ethical practices for research.
+The replication crisis refers to a lack of reproducibility in experimental designs and the scientific method. Therefore, assessing the data for ethical considerations such as the replication process are critical; otherwise issues of integrity arise. For example, say one investigator is trying to repeat the research design of another scientist, but they cannot produce the same results as the original study. The replication crisis occurs due to inconsistencies and manipulations that are not reported throughout the study.
 
-Preregistration consists of a list of criteria that help mitigate the threats of unethical scientific practices and encourage the responsible conduct of research. In the following paragraph, I will list some preregistration strategies and describe how they address the replication crisis. First, by consolidating the research methodology and process before the experiment, the researcher is less likely to change their methods to skew their results because they are following the experiment sequence they designed beforehand. Second, by conducting background research about the theory to develop a hypothesis, the author uses literature to develop a prediction and will not create their hypothesis after running the results; otherwise, their predictions will always be true. Third, having a public repository of the data and code for the analyses allows for the accessibility and reproducibility of the experiment. Fourth, by discussing model limitations and condition checks, such as whether random sampling and random assignment were achieved for this study, the investigator are transparent about their data and the application of their findings. And lastly, by emphasizing the substantive importance of the results in addition to the statistical interpretation and significance, they have demonstrated a rigorous and comprehensive understanding of their results.
+As a result, they produce misleading and sometimes favorable results that are not indicative of the true results of the experiment. However, to solve this issue, researchers can pre-register their study. Preregistration refers to a set of protocols that support "open science," which is reproducible, accessible, transparent, and rigorous. Overall "open science" principles allow for best and ethical practices for research. Preregistration consists of a list of criteria that help mitigate the threats of unethical scientific practices and encourage the responsible conduct of research.
+
+First, by consolidating the research methodology and process before the experiment, the researcher is less likely to change their methods to skew their results because they are following the experiment sequence they designed beforehand. I fulfilled this procedure by developing my research question, background research and hypotheses before conducting the experiment. The research question guided my investigations to consolidate the statistical tests I should perform.
+
+Second, by conducting background research about the theory to develop a hypothesis, the author uses literature to develop a prediction and will not create their hypothesis after running the results; otherwise, their predictions will always be true. Therefore, to develop my hypothesis I conducted research about the neuroscience, psychology and biology of decision-making, including the role of confounding variables.
+
+Third, having a public repository of the data and code for the analyses allows for the accessibility and reproducibility of the experiment, and all of my code is available on GitHub. Fourth, by discussing model limitations and condition checks, such as whether random sampling and random assignment were achieved for this study, the investigator are transparent about their data and the application of their findings. I will pursue this in the discussion and future directions section of my study. And lastly, by emphasizing the substantive importance of the results in addition to the statistical interpretation and significance, they have demonstrated a rigorous and comprehensive understanding of their results.
 
 Therefore, in conclusion, some preregistration methods consist of registering the research method and report, developing a hypothesis before testing it, opening data/code, discussing limitations, and understanding the application of the results. And all of these methods are used to make reproducible, accessible, transparent, and rigorous open science.
 
@@ -118,15 +124,17 @@ During this stage of data pre-processing, I checked for missing values, removing
 
 # **Statistical Methods**
 
-### [T-Test:]{.underline}
+### [T-Test and One-Way Anova:]{.underline}
 
-In a t-test, the researcher determines if there is a significant difference between the means of the two groups. This test calculates a t-value and compares this to the critical value to show if the difference is statistically significant. I will use a t-test to assess if there is a statistically significant difference in the frequency rate of choosing Option B (`bRate`) dependent on the information (`Amb`) or feedback (`Feedback`) provided. Therefore, if there is no significant difference, then `Amb` and `Feedback` do not have statistically significant explanatory power. In other words, the `bRate` will not change based on the information (`Amb`) or feedback (`Feedback`) provided. 
+In a t-test, the researcher determines if there is a significant difference between the means of the two groups, whereas the One-Way ANOVA looks at more than two groups and calculates the f-statistic as well to measure the between group variation over the within group variation. The t-test calculates a t-value and compares this to the critical value to show if the difference is statistically significant.
 
-### [One-Way ANOVA:]{.underline}
+The ANOVA and t-test will both be used to assess if there is a statistically significant difference in the frequency rate of choosing Option B (`bRate`) dependent on the information (`Amb`) or feedback (`Feedback`) provided. It essentially compares the averages of the dependent variable and investigates if the averages contrast by the treatment provided.
+
+Therefore, if this example, if there is no significant difference on `bRate` based on the `Amb` and/or `Feedback` then we do not have statistically significant explanatory power. In other words, the `bRate` will not change based on the information (`Amb`) or feedback (`Feedback`) provided. 
 
 ### [Box plot:]{.underline}
 
-Because I will a t-test to compare group means, the box plot will help visualize the distribution of the data and any potential outliers or skewness. It will also be used to demonstrate the distribution of probabilities for Gambles A and B, with separate boxes for each. Use box plots to visualize the distribution of the outcome variable (`bRate`) across different levels of a categorical variable (e.g., `feedback`, `Amb`) to check for differences in means.
+Because I will a t-test and One-Way ANOVA to compare group means, the box plot will help visualize the distribution of the data and any potential outliers or skewness. It will also be used to demonstrate the distribution of probabilities for Gambles A and B, with separate boxes for each. The box plots will visualize the distribution of the outcome variable (`bRate`) across different levels of a categorical variable (e.g., `feedback`, `Amb`) to check for differences in means.
 
 ### [Logistic Regression:]{.underline}
 
@@ -134,11 +142,7 @@ Researchers use logistic regression plots to visualize the relationship between 
 
 ### [**Levene's Test:**]{.underline} 
 
-Levene's test is designed to test a hypothesis, so a large p-value indicates that we fail to reject the null and the groups have homogeneity. This is evidence that the population variances are not significantly different, and we have constant variance among the groups.
-
-### [**Probability Density Plot:**]{.underline} 
-
-If you use logistic regression to assess the impact of various independent variables on the likelihood of choosing Gamble A or B, a probability density plot could be a useful visualization to display the distribution of predicted probabilities for each choice. This could help to illustrate any differences in the distribution of predicted probabilities between the two choices.
+Levene's test is designed to test a hypothesis, so a large p-value indicates that we fail to reject the null and the groups have homogeneity. This is evidence that the population variances are not significantly different, and we have constant variance among the groups. This will be used as one of the approaches to test the assumptions of normality for the ANOVA and t-test.
 
 ### [**Correlation Matrix:**]{.underline} 
 
@@ -146,9 +150,9 @@ If you use logistic regression to assess the impact of various independent varia
 
 Use a correlation matrix plot to visualize the pairwise correlations between all continuous variables in the data set to check for multicollinearity. The result is a table containing the correlation coefficients between each variable and the others that illustrates the dependence between multiple variables at the same time. I will make a matrix plot with variables `Ha`, `pHa`, `La`, `Hb`, `pHb`, `Lb`, `Corr`, `bRate` to assess for multicollinearity where 0 indicates the values have no linear relationship between two continuous variables, and a coefficient of -1/-1 indicates there is a perfect -/+ linear relationship. A linear relationship would suggest the two different variables are associated and the degree of their changes impact each other. Heat maps to visualize the relationship between two categorical variables or mapping the continuous variables to check for any patterns or associations.
 
-### [**Histogram:**]{.underline} 
+### [**Probability Density Plot:**]{.underline} 
 
-Use histograms to visualize the distribution of each variable (`Ha`, `Hb`, `pHa`, `pHb`, `bRate`, `Lb`, `LotShapeB`, `LotNumB`) to check for normality assumptions.
+If you use logistic regression to assess the impact of various independent variables on the likelihood of choosing Gamble A or B, a probability density plot could be a useful visualization to display the distribution of predicted probabilities for each choice. This could help to illustrate any differences in the distribution of predicted probabilities between the two choices.
 
 \newpage
 
@@ -285,8 +289,6 @@ After conducting Levene's test of homogeneity of variance, we see that our p-val
 leveneTest(bRate~Amb, data=choices_df)
 ```
 
-\newpage
-
 ### [**Logistic Regression on `pHa` and `Feedback`:**]{.underline}
 
 In studying the effect of `Feedback` on the probability of the first outcome occurring in Option A, `pHa`. The table below shows the summary of a logistic regression that models the presence of `pHa` using `Feedback` as a predictor, the coefficient of `pHa` is 0.01387. The p-value is not statistically significant, so our model suggests that `feedback` does not impact the probability of the first outcome occurring in Option A, `pHa`. However if this was statistically significant we would state that there is an increase in the probability of the first outcome occurring in Option A, `pHa` based on `Feedback` because the coefficient is positive. Specifically, we would states that the feedback group has a 1.0143 times the odds of the non-feedback groups of getting the probability of the first outcome occurring in Option A, `pHb`.
@@ -354,7 +356,7 @@ corr_matrix
 
 In the correlation matrix plot below, the probabilities of the outcomes in Option A are correlated, as well as the probabilities of the outcomes in Option B. For example, `pHa` and `La` have a linear relationship, just as `Hb`, `pHb`, and `Lb` have a linear relationship. Therefore we can conclude that the probabilities of receiving the first or second outcome within a gamble are correlated.
 
-```{r, warning=F, message=F}
+```{r, warning=F, message=F, fig.height=5}
 # Create a correlation matrix plot using the "corrplot" package
 corrplot(corr_matrix, method = "circle", type = "upper", 
          tl.col = "black", tl.srt = 45,
@@ -364,12 +366,12 @@ corrplot(corr_matrix, method = "circle", type = "upper",
 
 In the heat map below, the darker colors signify a father coefficient from 0, and the lighter the shade of blue, the closer a coefficient is to zero. For example, the darkest squares have a coefficient of 1 and and they demonstrate a strong linear relationship between the continuous variables and themselves: pHb-pHb, Ha-Ha, pHa-pHa, Corr-Corr, bRate-bRate, Hb-Hb, Lb-Lb and La-La. Next, there are linear relationships between pHb, Hb, and Lb. And linear relationships between pHa and Ha which all demonstrate that the probability distributions of the first and second outcome in each Option A or B are associated.
 
-```{r, warning=F, message=F}
+```{r, warning=F, message=F, fig.height=5}
 palette = colorRampPalette(c("blue", "lightblue", "navy")) (20)
 heatmap(x = corr_matrix, col = palette, symm = TRUE)
 ```
 
-# \*\*PROF. DUTT : 
+# \*\*PROF. DUTT :
 
 I do not have a `Choice` variable so I cannot run this code. If I should create a `Choice` variable using the z-score pointers you gave me how would I do this?
 
@@ -390,8 +392,8 @@ I do not have a `Choice` variable so I cannot run this code. If I should create 
 ### [**Probability Density Plot:**]{.underline}
 
 ```{r, warning=F, message=F}
-# Assuming you have a logistic regression model "logit_model" predicting the binary outcome variable "choice"
-# Extract the predicted probabilities for each choice
+# Assuming you  ave a logistic regression model "logit_model" predicting the binary outcome variable "choice"
+# # Extract the predicted probabilities for each choice
 # probs <- predict(logit_model, type = "response")
 # 
 # # Create a density plot for each choice
@@ -417,102 +419,6 @@ I do not have a `Choice` variable so I cannot run this code. If I should create 
 #   xlab("Feedback") +
 #   ylab("Choice") +
 #   ggtitle("Heat map of frequencies by feedback and choice")
-```
-
-### 
-
-### [**Probability Distribution:**]{.underline}
-
-```{r, echo = FALSE, warning=F, message=F}
-prob_pHa <-
-  ggplot(data=choices_df, aes(x=pHa)) + 
-  geom_histogram(bins =10) + 
-  labs(title ="Probability of the First Outcome",
-      subtitle= "Distribution Plot of Option A",
-      caption ="source: Choices13K") +
-  xlab("Probability in Option A (0-impossible, 1-certain)") +
-  ylab ("Occurances Count") 
-prob_pHa
-```
-
-```{r, echo = FALSE, warning=F, message=F}
-prob_La <-
-  ggplot(data=choices_df, aes(x=La)) + 
-  geom_histogram(bins =10) + 
-  labs(title ="Probability of the Second Outcome",
-      subtitle= "Distribution Plot of Option A",
-      caption ="source: Choices13K") +
-  xlab("Probability in Option A") +
-  ylab ("Occurances Count") 
-prob_La
-```
-
-```{r, echo=FALSE, warning=F, message=F}
-
-choicepHa_histogram <- ggplot(choices_df, aes(x=pHa)) +
-  geom_histogram(bins =20) +
-  ggtitle ("Distribution of 1st Outcome in Option A") +
-  xlab ("Probability of Occurence  (0- will not | 1- certain)") +
-  ylab ("Count of Outcome 1 in A")
-
-choicepHa_histogram
-```
-
-```{r, echo = FALSE, warning=F, message=F}
-# Boxplot of pHa by feedback
-pHa_boxplot <- 
-  boxplot(pHa ~ Feedback, data=choices_df, 
-          main="Boxplot of pHa by Feedback", 
-          xlab="Feedback", ylab="pHa")
-pHa_boxplot
-
-summary(choices_df$pHa)
-```
-
-[**Option B:**]{.underline} *Histograms: Use histograms to visualize the distribution of each variable (Ha, Hb, pHa, pHb, bRate, Lb, LotShapeB, LotNumB) to check for normality assumptions.*
-
-```{r, echo = FALSE, warning=F, message=F}
-prob_pHb <-
-  ggplot(data=choices_df, aes(x=pHb)) + 
-  geom_histogram(bins =10) + 
-  labs(title ="Probability of the First Outcome",
-      subtitle= "Distribution Plot of Option B",
-      caption ="source: Choices13K") +
-  xlab("Probability in Option B (0-impossible, 1-certain)") +
-  ylab ("Occurances Count") 
-prob_pHb
-```
-
-```{r, echo = FALSE, warning=F, message=F}
-prob_Lb <-
-  ggplot(data=choices_df, aes(x=Lb)) + 
-  geom_histogram(bins =10) + 
-  labs(title ="Probability of the Second Outcome",
-      subtitle= "Distribution Plot of Option B",
-      caption ="source: Choices13K") +
-  xlab("Probability in Option B") +
-  ylab ("Occurances Count") 
-prob_Lb
-```
-
-```{r, echo=FALSE, warning=F, message=F}
-
-choiceB_histogram <- ggplot(choices_df, aes(x=pHb)) +
-  geom_histogram(bins =20) +
-  ggtitle ("Histogram of the Probability of Option B") +
-  xlab ("Probability of Occurence  (0- will not, 1- certain)") +
-  ylab ("Count")
-
-choiceB_histogram
-```
-
-```{r, echo = FALSE, warning=F, message=F}
-# Boxplot of pHb by LotShapeB
-pHb_boxplot <- 
-  boxplot(pHb ~ LotShapeB, data=choices_df, 
-          main="Boxplot of pHb by LotShapeB", 
-          xlab="LotShapeB", ylab="pHb")
-pHb_boxplot
 ```
 
 # Discussion
