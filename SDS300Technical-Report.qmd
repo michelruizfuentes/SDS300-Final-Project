@@ -391,6 +391,12 @@ The dopamine reward system is a crucial system that drives behavior toward pleas
 
 # Future Directions
 
+Based on the data set provided and the revision required for the research question, and hypothesis, the first revisions that I would recommend for this data set and how an investigator could continue this work, would start with computing the frequency with which participants selected Gamble A to compare against `bRate` during the experiment. With this revision, I would have been able to test my original research question about how receiving various levels of feedback or information impacted the frequency rate of choosing Gamble A (risk-averse) and Gamble B (risk-seeking option); however in this test I was only able to test the risk-seeking option of `bRate`.
+
+Second, the researchers of the Choices13k data set could talk more about whether there was random sampling to show if we can draw population inferences or develop generalizable insights. Additionally, they could specify if they randomly assigned the treatment because although they stated that the following data was conducted via an experimental design, clarifying if there was random assignment for the treatments could further confirm that this was an experiment.
+
+pre-registration
+
 How could someone continue the work? Around 150-200 words.\] fMRI can show which brain regions and neural activity specifically visualized dopamine reward pathways <https://www.pnas.org/doi/10.1073/pnas.0606297104> 
 
 What machine learning will mean for asset managers and the future of investing. <https://hbr.org/2019/12/what-machine-learning-will-mean-for-asset-managers> 
