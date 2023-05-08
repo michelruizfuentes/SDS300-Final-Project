@@ -1,0 +1,61 @@
+---
+title: "Logistic Code that does not work"
+author: "Michel Ruiz-Fuentes"
+format: pdf
+editor: visual
+date: "`r Sys.Date()`"
+---
+
+# \*\*PROF. DUTT :
+
+I do not have a `Choice` variable so I cannot run these code. If I should create a `Choice` variable using the z-score pointers you gave me how would I do this?
+
+```{r, warning=F, message=F}
+# # Fit a logistic regression model to predict choice (0 = A, 1 = B) based on Hpa
+# Hpa_model <- glm(Choice ~ pHa, data = choices_df, family = binomial())
+# # Print the model summary
+# summary(Hpa_model)
+```
+
+```{r, warning=F, message=F}
+# # Fit a logistic regression model to predict choice (0 = A, 1 = B) based on Hpb
+# Hpb_model <- glm(Choice ~ pHb, data = choices_df, family = binomial())
+# # Print the model summary
+# summary(Hpb_model)
+```
+
+### [**Probability Density Plot:**]{.underline} 
+
+If you use logistic regression to assess the impact of various independent variables on the likelihood of choosing Gamble A or B, a probability density plot could be a useful visualization to display the distribution of predicted probabilities for each choice. This could help to illustrate any differences in the distribution of predicted probabilities between the two choices.
+
+```{r, warning=F, message=F}
+# Assuming you  ave a logistic regression model "logit_model" predicting the binary outcome variable "choice"
+# # Extract the predicted probabilities for each choice
+# probs <- predict(logit_model, type = "response")
+# 
+# # Create a density plot for each choice
+# ggplot(data.frame(probs = probs, choice = choice), aes(x = probs, fill = choice)) +
+#   geom_density(alpha = 0.5) +
+#   scale_fill_manual(values = c("#F8766D", "#00BFC4"), name = "Choice") +
+# #   xlab("Predicted probability") +
+# #   ylab("Density") +
+#   ggtitle("Distribution of predicted probabilities for each choice")
+```
+
+### [**Heat Map:**]{.underline}
+
+```{r, warning=F, message=F}
+# Assuming you have a data frame "df" with two categorical variables "feedback" and "choice"
+# Use the "table" function to create a contingency table of frequencies
+# freq_table <- table(df$feedback, df$choice)
+# 
+# # Create a heat map using the "ggplot2" package
+# ggplot(data.frame(freq_table), aes(x = Var1, y = Var2, fill = Freq)) +
+#   geom_tile() +
+#   scale_fill_gradient(low = "#FFFFFF", high = "#0072B2") +
+#   xlab("Feedback") +
+#   ylab("Choice") +
+#   ggtitle("Heat map of frequencies by feedback and choice")
+```
+
+# 

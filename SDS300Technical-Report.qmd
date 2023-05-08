@@ -10,17 +10,21 @@ date: "`r Sys.Date()`"
 
 # Abstract
 
-What characteristics influence the decision-making process behind our money management, and can a better understanding of these natural and social phenomena improve our finances? In this project, I investigated risk decisions and their implications for financial professionals such as investors, traders, or brokers. I am using the Choices13K dataset, an open data source retrieved from GitHub that is among the largest human decision response on risk-choice problems datasets with at least 13,000 responses. In this study, the participants participated in a series of experiments where they faced two options to gamble: a risk-averse or risk-seeking option. Each option had a different set of possible outcomes. For example, if they chose Option A, there was a certain probability of a 100% chance of a \$0 return (risk-averse); however, if they chose Option B, there was a lottery outcome with a. 50-50% chance of winning or losing \$100 (risk-seeking). My research question studies if and how participants' responses contrast with the risky-choice problem when there are known probabilities (certainty) versus unknown probabilities (ambiguity and lottery).
+What biological and social mechanisms influence our decision-making processes, such as the choices we make for our money management, and can a better understanding of these natural and social phenomena improve our finances? In this project, I investigated risk decisions and their implications for financial professionals such as investors, traders, or brokers. I am using the Choices13K data set, an open data source retrieved from GitHub that is among the largest human decision response on risk-choice problems datasets with at least 13,000 responses.
 
-I use neuroscience, psychology, and neurobiology to investigate the underlying biological and social mechanisms that impact decision-making and confidence in financial risk management. For the neuroscience research, I investigated how desire activates our neural reward system and dopamine system, which influences the processes for decision-making in the limbic system and neocortex. Then in the psychology discipline, I researched behavioral biases and behavioral finance protocols under the CFA (Chartered Financial Analyst non-profit) to observe how emotions and pleasure-seeking approach vs. loss aversion approach impact decision-making. And lastly, in my research within the neurobiology field, I studied interoceptive abilities and genetics, such as testosterone, and how the levels of each explain the nuances of financial decision-making. In my methodology, I perform a t-test, logistic regression, and a correlation matrix to respond to my research question.
+In this study, the participants participated in a series of experiments where they faced two options to gamble: a risk-averse or risk-seeking gamble. Each gamble had a different set of possible outcomes. For example, if they chose Gamble A, there was a certain probability of a 100% chance of a \$0 return (risk-averse); however, if they chose Gamble B, there was a lottery outcome with a 50-50% chance of winning or losing \$100 (risk-seeking). My research question studies if and how participants' responses to the risky-choice problem contrast when there are known probabilities (certainty) versus unknown probabilities (ambiguity and lottery).
+
+I use neuroscience, psychology, and biology to investigate the underlying processes that impact decision-making in the context of financial decisions and risk management. In the neuroscience discipline, I investigated how desire activates our neural reward system and dopamine system, which influences the limbic system and neocortex where some of decision-making occurs. The field of psychology demonstrates that behavioral biases and behavioral finance protocols help researchers observe how emotions and pleasure-seeking approach vs. loss aversion approach impact decision-making. And lastly, within the study of biology and decision-making, I studied interoceptive abilities and genetics, such as testosterone, and how the levels of each explain the nuances of financial decision-making. In my methodology, I perform a t-test, logistic regression, and a correlation matrix to respond to my research question.
 
 # Introduction
 
 ### [**Background:**]{.underline}
 
-What factors influence whether we become risk-averse, risk-seeking, or risk-neutral individuals? Risk-averse individuals seek low-risk investments to preserve capital. Risk-seeking individuals seek investments with a higher or unlimited degree of risk in hopes of producing a strong return. If we become informed about the various factors that shape our risk tolerance, can this understanding improve our judgment and decision-making skills? In this research design, I investigate the factors that influence decision-making and run statistical tests on a risky-choice dataset to test my hypothesis.
+What factors influence whether we become risk-averse, risk-seeking, or risk-neutral individuals? Risk-averse individuals seek low-risk investments to preserve capital, whereas risk-seeking individuals seek investments with a higher or unlimited degree of risk in hopes of producing a strong return. If we become informed about the various factors that shape our risk tolerance, can this understanding improve our judgment and decision-making skills? In this research design, I investigate the factors that influence decision-making and run statistical tests on a risky-choice data set to test my hypothesis.
 
-The risky-choice framing effect was coined by psychologists Daniel Kahneman and Amos Tversky. They studied judgment and decision-making. Judgment is the estimation (or guessing) of magnitudes and probabilities, while decision-making is how we choose under uncertainty. Kahneman and Tversky studied the ways that humans responded to a series of risky-choice problems and discovered that risk perception played an instrumental role in influencing the participant's choice. For example, if one gamble was framed positively for having a gain outcome, the subject preferred a risk-averse option. On the other hand, if another gamble was framed negatively for having a potential loss, the subject preferred a risk-seeking option. Individuals make choices dependent on the degree of risk involved, so my literature review is a multi-disciplinary analysis of this phenomenon across a range of fields of study.
+The risky-choice framing effect was coined by psychologists Daniel Kahneman and Amos Tversky. They studied judgment and decision-making. Judgment is the estimation (or guessing) of magnitudes and probabilities, while decision-making is how we choose under uncertainty. Kahneman and Tversky studied the ways that humans responded to a series of risky-choice problems and discovered that risk perception played an instrumental role in influencing the participant's choice.
+
+For example, if one gamble was framed positively for having a gain outcome, the subject preferred a risk-averse gamble. On the other hand, if another gamble was framed negatively for having a potential loss, the subject preferred a risk-seeking gamble. Individuals make choices dependent on the degree of risk involved, so my literature review is a multi-disciplinary analysis of this phenomenon across a range of fields of study.
 
 ### [**Neuroscience:**]{.underline}
 
@@ -64,13 +68,11 @@ How do the participant's responses to the risky-choice problem contrast with kno
 
 ### [**Hypothesis:**]{.underline}
 
-Null Hypothesis states there is no difference in the mean rate of participants choosing either Option A or Option B depending on whether they receive feedback. The true difference between the group means is equal to zero.
+Null Hypothesis states there is no difference in the mean score of participant's choice of gamble (A or B) depending on whether they receive feedback or information about the outcomes of the variables. The true difference between the group means would be zero to indicate the means are the same and do not change based on the treatment provided; treatment being the feedback or information levels.
 
-Alternative Hypothesis states there is a difference in the mean rate of participants choosing either Option A or Option B depending on whether they receive feedback. The true difference between the group means is different from zero.
+Alternative Hypothesis states there is at least one difference mean score of participant's choice of gamble (A or B) depending on whether they receive feedback or information about the outcomes of the variables. The true difference between the group means is different from zero. The true difference between the group means would contrast and therefore not include zero to indicate the means are vary based on the treatment provided; treatment being the feedback or information levels.
 
-Based on the literature, I believe there will be a difference in the mean rate of participants choosing either Option A or Option B depending on whether they receive feedback. Kahneman and Tversky's research on decision-making and risk perception indicates that the feedback and perception used to frame Options A and B influence the participant's choice.
-
-For example, if one gamble was framed positively for having a gain outcome, the subject preferred a risk-averse option. On the other hand, if another gamble was framed negatively for having a potential loss, the subject preferred a risk-seeking option.
+Based on the literature, I support the alternative hypothesis and believe there will be a difference in the mean score of participant's choice of gamble (A or B) depending on the treatment and level provided: whether they receive feedback (true or false) or information (none or complete). Kahneman and Tversky's research on decision-making and risk perception indicates that the feedback and perception used to frame risky-choice problems influence the participant's choice. For example, if one gamble was framed positively for having a gain outcome, the subject preferred a risk-averse option. On the other hand, if another gamble was framed negatively for having a potential loss, the subject preferred a risk-seeking option.
 
 ### [**Data set:**]{.underline}
 
@@ -94,51 +96,49 @@ choices_df <- import("choices13k_dataset.xlsx")
 
 The [Choices13k data set](https://github.com/jcpeterson/choices13k) was collected by Joshua C. Peterson, David D. Bourgin, Mayank Agrawal, Daniel Reichman, and Thomas L. Griffins and published on GitHub. In this study, participants engaged in a series of risky-choice problems. 
 
-Choices13k is among the largest human decision rates on risky-choice problems datasets, with at least 13,000 responses. In this study, participants participated in a series of experiments where they faced two options to gamble: a risk-averse or risk-seeking option. Each option had a different possible outcome. Therefore, if they chose Option A, there was a certain probability of a 100% chance of \$0. However, if they chose Option B, there was a lottery outcome of a 50-50 chance of winning or losing \$100.
+Choices13k is among the largest human decision rates on risky-choice problems datasets, with at least 13,000 responses. In this study, participants received a risky- choice problem with one of two gambles, and each option had a different possible outcome. In Gamble A, there was a certain probability of a 100% chance of \$0, so this was the risk-averse option. However, in Gamble B, there was a lottery outcome of a 50-50 chance of winning or losing \$100, and this was the risk-seeking option.
 
-This dataset was used to build quantitative models in machine learning to predict human behavior. However, due to the complexity of many factors (neuroscience, psychology, neurobiology, etc.) that underly decision-making, the researchers had a challenging time building a model that accurately predicts human judgment. Therefore, because the project utilizes statistical methods to better understand how feedback and certainty impact decision-making, this is not a replication study of the original researchers who focused on using Choices13K for machine learning purposes.
+This data set was used to build quantitative models in machine learning to predict human behavior. However, due to the complexity of many factors (neuroscience, psychology, biology, etc.) that underly decision-making, the researchers had a challenging time building a model that accurately predicted human judgment. Therefore, because my project utilizes statistical methods to better understand how feedback and certainty impact decision-making, this is not a replication study of the original researchers who focused on using Choices13K for machine learning purposes.
 
 ### [**Ethical Considerations:**]{.underline}
 
-The replication crisis refers to a lack of reproducibility in experimental designs and the scientific method. Therefore, assessing the data for ethical considerations such as the replication process are critical; otherwise issues of integrity arise. For example, say one investigator is trying to repeat the research design of another scientist, but they cannot produce the same results as the original study. The replication crisis occurs due to inconsistencies and manipulations that are not reported throughout the study.
+The replication crisis refers to a lack of reproducibility in experimental designs and the scientific method. Therefore, assessing the data for ethical considerations such as the replication process are critical; otherwise issues of integrity arise. For example, say one investigator is trying to repeat the research design of another scientist, but they cannot produce the same results as the original study. The replication crisis occurs when inconsistencies and manipulations are not reported in the research design. These experiments then produce misleading and sometimes favorable results that are not indicative of the true results of the experiment.
 
-As a result, they produce misleading and sometimes favorable results that are not indicative of the true results of the experiment. However, to solve this issue, researchers can pre-register their study. Preregistration refers to a set of protocols that support "open science," which is reproducible, accessible, transparent, and rigorous. Overall "open science" principles allow for best and ethical practices for research. Preregistration consists of a list of criteria that help mitigate the threats of unethical scientific practices and encourage the responsible conduct of research.
+However, to solve this issue, researchers can pre-register their study. Preregistration refers to a set of protocols that support "open science," which is reproducible, accessible, transparent, and rigorous. Overall "open science" principles allow for best and ethical practices for research. Preregistration consists of a list of criteria that help mitigate the threats of unethical scientific practices and encourage the responsible conduct of research.
 
-First, by consolidating the research methodology and process before the experiment, the researcher is less likely to change their methods to skew their results because they are following the experiment sequence they designed beforehand. I fulfilled this procedure by developing my research question, background research and hypotheses before conducting the experiment. The research question guided my investigations to consolidate the statistical tests I should perform.
+First, by consolidating the research methodology and process before the experiment, the researcher is less likely to change their methods to skew their results because they are following the experiment sequence they designed beforehand. I fulfilled this procedure by developing my research question, conducted my background research and developed my hypotheses before conducting the experiment. The research question guided my investigations to consolidate the types of statistical tests (t-test, ANOVA, logistic regression) I should perform to test my question.
 
-Second, by conducting background research about the theory to develop a hypothesis, the author uses literature to develop a prediction and will not create their hypothesis after running the results; otherwise, their predictions will always be true. Therefore, to develop my hypothesis I conducted research about the neuroscience, psychology and biology of decision-making, including the role of confounding variables.
+Second, by conducting background research about the theory to develop a hypothesis, the author uses literature to develop a prediction and will not create their hypothesis after running the results; otherwise, their predictions will always be true. Therefore, to develop my hypothesis I conducted research about the neuroscience, psychology and biology of decision-making, including the role of confounding variables. I stated the null and alternative, and correlated the literature with the alternative hypothesis.
 
-Third, having a public repository of the data and code for the analyses allows for the accessibility and reproducibility of the experiment, and all of my code is available on GitHub. Fourth, by discussing model limitations and condition checks, such as whether random sampling and random assignment were achieved for this study, the investigator are transparent about their data and the application of their findings. I will pursue this in the discussion and future directions section of my study. And lastly, by emphasizing the substantive importance of the results in addition to the statistical interpretation and significance, they have demonstrated a rigorous and comprehensive understanding of their results.
+Third, having a public repository of the data and code for the analyses allows for the accessibility and reproducibility of the experiment. All of my code, literature, and citations are available on GitHub. Fourth, by discussing model limitations and condition checks, such as whether random sampling and random assignment were achieved for this study, the investigator are transparent about their data and the application of their findings to the real world. I will pursue this in the discussion and future directions section of my study. And lastly, by emphasizing the substantive importance of the results in addition to the statistical interpretation and significance, they have demonstrated a rigorous and comprehensive understanding of their results.
 
-Therefore, in conclusion, some preregistration methods consist of registering the research method and report, developing a hypothesis before testing it, opening data/code, discussing limitations, and understanding the application of the results. And all of these methods are used to make reproducible, accessible, transparent, and rigorous open science.
+Therefore, in conclusion, some preregistration methods consist of registering the research method and report, developing a hypothesis before testing it, opening data/code, discussing limitations, and understanding the application of the results. All of these methods are used to make reproducible, accessible, transparent, and rigorous "open science" so I will follow this method for my project.
 
 ### [**Data Cleaning:**]{.underline}
 
-During this stage of data pre-processing, I checked for missing values, removing, or correcting any errors/inconsistencies, and data types. However, because this data was used for a machine-learning project, the data is relatively accessible and clean, and I will be using it for statistics and results purposes. The majority of my cleaning arose from changing data types to fit my analyses.
+During this stage of data pre-processing, I checked for missing values, removed, and/or corrected any errors/inconsistencies, and data types. However, because this data was used for a machine-learning project, the data was relatively accessible and clean, and I will be using it for statistics and results purposes. The majority of my cleaning arose from changing data types to fit my analyses.
 
 ### [**Variables of Interest:**]{.underline}
 
-![Choices 14k Dataset Variables](sds300-table.jpg){alt="Choices 14k Dataset Variables"}
-
-\newpage
+![Choices 14k Dataset Variables](sds300-table.jpg){alt="Choices 14k Dataset Variables"} \newpage
 
 # **Statistical Methods**
 
-### [T-Test and One-Way Anova:]{.underline}
+### [T-Test:]{.underline}
 
-In a t-test, the researcher determines if there is a significant difference between the means of the two groups, whereas the One-Way ANOVA looks at more than two groups and calculates the f-statistic as well to measure the between group variation over the within group variation. The t-test calculates a t-value and compares this to the critical value to show if the difference is statistically significant.
+In a t-test, the researcher determines if there is a significant difference between the means of the two groups. The t-test calculates a t-value and compares this to the critical value to show if the difference is statistically significant. The ANOVA and t-test will both be used to assess if there is a statistically significant difference in the frequency rate of choosing Gamble B (`bRate`) dependent on the information (`Amb`) or feedback (`Feedback`) provided. It essentially compares the averages of the dependent variable and investigates if the averages contrast by the treatment provided. 
 
-The ANOVA and t-test will both be used to assess if there is a statistically significant difference in the frequency rate of choosing Option B (`bRate`) dependent on the information (`Amb`) or feedback (`Feedback`) provided. It essentially compares the averages of the dependent variable and investigates if the averages contrast by the treatment provided.
+### [One-Way Anova:]{.underline}
 
-Therefore, if this example, if there is no significant difference on `bRate` based on the `Amb` and/or `Feedback` then we do not have statistically significant explanatory power. In other words, the `bRate` will not change based on the information (`Amb`) or feedback (`Feedback`) provided. 
+One-Way ANOVA looks at the means of more than two groups and calculates the f-statistic as well to measure the between group variation over the within group variation. Therefore, if this example, if there is no significant difference on `bRate` based on the `Amb` and/or `Feedback` then we do not have statistically significant explanatory power. In other words, the `bRate` will not change based on the information (`Amb`) or feedback (`Feedback`) provided.
 
 ### [Box plot:]{.underline}
 
-Because I will a t-test and One-Way ANOVA to compare group means, the box plot will help visualize the distribution of the data and any potential outliers or skewness. It will also be used to demonstrate the distribution of probabilities for Gambles A and B, with separate boxes for each. The box plots will visualize the distribution of the outcome variable (`bRate`) across different levels of a categorical variable (e.g., `feedback`, `Amb`) to check for differences in means.
+Because I will run a t-test and One-Way ANOVA to compare group means, the box plot will help visualize the distribution of the data and any potential outliers or skewness. It will also be used to demonstrate the distribution of probabilities for Gambles A and B, with separate boxes for each. The box plots will visualize the distribution of the outcome variable (`bRate`) across different levels of a categorical variable (e.g., `feedback`, `Amb`) to check for differences in means.
 
 ### [Logistic Regression:]{.underline}
 
-Researchers use logistic regression plots to visualize the relationship between the predictor variables (e.g., `feedback`, `Amb`) and the binary outcome variable (the chosen Gamble) to check for significant effects and to interpret the odds ratios.
+This statistical method predicts the outcome of `bRate` (dependent variable) based on the previous observations, `feedback` or `Amb`. Researchers use logistic regression plots to visualize the relationship between the predictor variables (e.g., `feedback`, `Amb`) and the binary outcome variable (`bRate` of chosen Gamble B) to check for significant effects and to interpret the odds ratios. If the p-value is below 0.05 we would reject the null and determine evidence for a statistically significant difference, but if it above 0.05 then we fail to reject the null.
 
 ### [**Levene's Test:**]{.underline} 
 
@@ -148,11 +148,7 @@ Levene's test is designed to test a hypothesis, so a large p-value indicates tha
 
 #### Correlation Matrix Table, Plot, and Heat Map:
 
-Use a correlation matrix plot to visualize the pairwise correlations between all continuous variables in the data set to check for multicollinearity. The result is a table containing the correlation coefficients between each variable and the others that illustrates the dependence between multiple variables at the same time. I will make a matrix plot with variables `Ha`, `pHa`, `La`, `Hb`, `pHb`, `Lb`, `Corr`, `bRate` to assess for multicollinearity where 0 indicates the values have no linear relationship between two continuous variables, and a coefficient of -1/-1 indicates there is a perfect -/+ linear relationship. A linear relationship would suggest the two different variables are associated and the degree of their changes impact each other. Heat maps to visualize the relationship between two categorical variables or mapping the continuous variables to check for any patterns or associations.
-
-### [**Probability Density Plot:**]{.underline} 
-
-If you use logistic regression to assess the impact of various independent variables on the likelihood of choosing Gamble A or B, a probability density plot could be a useful visualization to display the distribution of predicted probabilities for each choice. This could help to illustrate any differences in the distribution of predicted probabilities between the two choices.
+The correlation matrix table contains the correlation coefficients between each variable and the others that illustrates the dependence between multiple variables at the same time. The correlation matrix plot will visualize the pairwise correlations between all continuous variables in the data set to check for multicollinearity. I will make a matrix plot with variables `Ha`, `pHa`, `La`, `Hb`, `pHb`, `Lb`, `Corr`, `bRate` to assess for multicollinearity where 0 indicates the values have no linear relationship between two continuous variables, and a coefficient of -1/-1 indicates there is a perfect -/+ linear relationship. A linear relationship would suggest the two different variables are associated and the degree of their changes impact each other. Heat maps to visualize the relationship between two categorical variables or mapping the continuous variables to check for any patterns or associations.
 
 \newpage
 
@@ -162,11 +158,11 @@ The results section will consist of multiple statistical tests and data visualiz
 
 ### [**T-Test for `bRate` and `Feedback`:**]{.underline}
 
-Utilizing a t-test to assess if there is a statistically significant difference between the mean **`bRate`** \[the frequency of choosing Option B\] between the the true and false groups of whether the participants received **`Feedback`** on the outcome.
+Utilizing a t-test to assess if there is a statistically significant difference between the mean **`bRate`** \[the frequency of choosing Gamble B\] between the the true and false groups of whether the participants received **`Feedback`** on the outcome.
 
 The p-value is above 0.8441, so we fail to reject the null hypothesis which states there is no difference in the frequency with which participants select **`bRate`** depending on their treatment of whether they had **`Feedback`** about the outcomes.
 
-Additionally, the confidence interval shows that we are 95% that our true population parameter falls within \[-0.011334634, 0.007675331\]. This confidence interval includes zero which demonstrates that the true population parameter could be zero and the mean frequency rate of choosing Option B would be the same regardless of the **`Feedback`** about the outcome.
+Additionally, the confidence interval shows that we are 95% that our true population parameter falls within \[-0.011334634, 0.007675331\]. This confidence interval includes zero which demonstrates that the true population parameter could be zero and the mean frequency rate of choosing Gamble B would be the same regardless of the **`Feedback`** about the outcome.
 
 ```{r, warning=F, message=F}
 # Running a t-test for bRate and Feedback
@@ -206,10 +202,10 @@ By looking at the plot, we can see that the constant variance condition is not v
 bRate_feedback <-
   ggplot(data=choices_df, aes(x=bRate, color=Feedback)) + 
   geom_boxplot() + 
-  labs(title ="Frequency of Option B ('gamble') Box Plot",
+  labs(title ="Frequency of Gamble B ('gamble') Box Plot",
       subtitle= "Assessing Distribution by Feedback Level",
       caption ="source: Choices13K") +
-  xlab("Probability of Option B (0-impossible, 1-certain)") +
+  xlab("Probability of Gamble B (0-impossible, 1-certain)") +
   ylab ("Feedback Rate") 
 bRate_feedback
 ```
@@ -227,11 +223,11 @@ Because neither the symmetric conditions around group means, normal distribution
 
 ### [**T-Test for `bRate` and `Amb`:**]{.underline}
 
-Utilizing a t-test to assess if there is a statistically significant difference between the mean `bRate` \[the frequency of choosing Option B\] depending on the `Amb`. This refers to the differences between the true and false groups of whether the participants received complete information or no information about the probabilities of the outcomes in Option B. 
+Utilizing a t-test to assess if there is a statistically significant difference between the mean `bRate` \[the frequency of choosing Gamble B\] depending on the `Amb`. This refers to the differences between the true and false groups of whether the participants received complete information or no information about the probabilities of the outcomes in Gamble B. 
 
-The p-value is above 2.2e-16 which is below 0.05, so we reject the null hypothesis which states there is no difference in the frequency with which participants select `bRate` depending on their treatment of whether they had received no information or complete information about the probabilities of the outcomes in Option B.
+The p-value is above 2.2e-16 which is below 0.05, so we reject the null hypothesis which states there is no difference in the frequency with which participants select `bRate` depending on their treatment of whether they had received no information or complete information about the probabilities of the outcomes in Gamble B.
 
-Additionally, our confidence interval shows that we are 95% that our true population parameter falls within \[0.5090787, 0.5582683\] and does not include zero. This demonstrates that the true population parameter will not be equal to zero and the mean frequency rate of choosing Option B is statistically different based on `Amb` or the amount of information (none of complete) provided about the probabilities of each outcome occurring in Option B. 
+Additionally, our confidence interval shows that we are 95% that our true population parameter falls within \[0.5090787, 0.5582683\] and does not include zero. This demonstrates that the true population parameter will not be equal to zero and the mean frequency rate of choosing Gamble B is statistically different based on `Amb` or the amount of information (none of complete) provided about the probabilities of each outcome occurring in Gamble B. 
 
 ```{r, warning=F, message=F}
 # Running a t-test for bRate and Amb
@@ -263,7 +259,7 @@ cat("p-value =", p_value, "\n")
 
 [**Symmetrical Distribution around Group Means**]{.underline}:
 
-The box-plot below shows us the distribution of the average `bRate` on the different levels of `Amb` of true or false which represent whether participants received complete or no information about their gambles before choosing the option. We will compare the variation in the interquartile ranges of each treatment. We can see that this condition is not violated, when looking at the spread in the false and true group are the same. There is also an absence of outliers so we have not violated these normality assumptions.
+The box-plot below shows us the distribution of the average `bRate` on the different levels of `Amb` of true or false which represent whether participants received complete or no information about their gambles before choosing the gamble. We will compare the variation in the interquartile ranges of each treatment. We can see that this condition is not violated, when looking at the spread in the false and true group are the same. There is also an absence of outliers so we have not violated these normality assumptions.
 
 By looking at the plot, we can see that the constant variance condition is not violated. We have constant variance across the true and false groups. However, checking conditions with visualizations can be tricky, so we can refer to Levene's test to also check our constant variance condition.
 
@@ -272,10 +268,10 @@ By looking at the plot, we can see that the constant variance condition is not v
 bRate_Amb <-
   ggplot(data=choices_df, aes(x=bRate, color=Amb)) + 
   geom_boxplot() + 
-  labs(title ="Frequency of Option B ('gamble') Box Plot",
+  labs(title ="Frequency of Gamble B ('gamble') Box Plot",
       subtitle= "Assessing Distribution by Information Level",
       caption ="source: Choices13K") +
-  xlab("Probability of Option B (0-impossible, 1-certain)") +
+  xlab("Probability of Gamble B (0-impossible, 1-certain)") +
   ylab ("Frequency Rate") 
 bRate_Amb
 ```
@@ -291,7 +287,7 @@ leveneTest(bRate~Amb, data=choices_df)
 
 ### [**Logistic Regression on `pHa` and `Feedback`:**]{.underline}
 
-In studying the effect of `Feedback` on the probability of the first outcome occurring in Option A, `pHa`. The table below shows the summary of a logistic regression that models the presence of `pHa` using `Feedback` as a predictor, the coefficient of `pHa` is 0.01387. The p-value is not statistically significant, so our model suggests that `feedback` does not impact the probability of the first outcome occurring in Option A, `pHa`. However if this was statistically significant we would state that there is an increase in the probability of the first outcome occurring in Option A, `pHa` based on `Feedback` because the coefficient is positive. Specifically, we would states that the feedback group has a 1.0143 times the odds of the non-feedback groups of getting the probability of the first outcome occurring in Option A, `pHb`.
+In studying the effect of `Feedback` on the probability of the first outcome occurring in Gamble A, `pHa`. The table below shows the summary of a logistic regression that models the presence of `pHa` using `Feedback` as a predictor, the coefficient of `pHa` is 0.01387. The p-value is not statistically significant, so our model suggests that `feedback` does not impact the probability of the first outcome occurring in Gamble A, `pHa`. However if this was statistically significant we would state that there is an increase in the probability of the first outcome occurring in Gamble A, `pHa` based on `Feedback` because the coefficient is positive. Specifically, we would states that the feedback group has a 1.0143 times the odds of the non-feedback groups of getting the probability of the first outcome occurring in Gamble A, `pHb`.
 
 ```{r, warning=F, message=F}
 # create logistic regression model for feedback and pHa
@@ -300,7 +296,7 @@ tbl_regression(Afeedback_model)
 #(e^=0.01387=1.01396) CALCULATING ODDS RATIO
 ```
 
-The logistic regression plot below shows `pHb` on the x-axis and Feedback on the y-axis, grouped by `Feedback` and colored by the levels of `Feedback`. It also includes a logistic regression line using the stat_smooth function with method = "glm" and family = "binomial". It visualizes the relationship between the `Feedback` (predictor variable) and the the binary outcome variable of `pHa`. The data spread is evenly distributed and not significantly different indicating that `feedback` levels of true and false do not impact the probability of the first outcome occurring in Option A, `pHa`.
+The logistic regression plot below shows `pHb` on the x-axis and Feedback on the y-axis, grouped by `Feedback` and colored by the levels of `Feedback`. It also includes a logistic regression line using the stat_smooth function with method = "glm" and family = "binomial". It visualizes the relationship between the `Feedback` (predictor variable) and the the binary outcome variable of `pHa`. The data spread is evenly distributed and not significantly different indicating that `feedback` levels of true and false do not impact the probability of the first outcome occurring in Gamble A, `pHa`.
 
 ```{r, warning=F, message=F, fig.height=2.5}
 # create logistic regression plot
@@ -317,7 +313,7 @@ ggplot(choices_df, aes(x = pHb, y = Feedback)) +
 
 ### [**Logistic Regression on `pHb` and `Feedback`:**]{.underline}
 
-In studying the effect of `Feedback` on the probability of the first outcome occurring in Option B, `pHB`. The table below shows the summary of a logistic regression that models the presence of `pHb` using `Feedback` as a predictor, the coefficient of `pHb` is 0.08093. The p-value is not statistically significant, so our model suggests that `feedback` does not impact the probability of the first outcome occurring in Option B, `pHb`. However if this was statistically significant we would state that there is an increase in the probability of the first outcome occurring in Option A, `pHb` based on `Feedback` because the coefficient is positive. Specifically, we would states that the feedback group has a 1.084 times the odds of the non-feedback groups of getting the probability of the first outcome occurring in Option A, `pHa`.
+In studying the effect of `Feedback` on the probability of the first outcome occurring in Gamble B, `pHB`. The table below shows the summary of a logistic regression that models the presence of `pHb` using `Feedback` as a predictor, the coefficient of `pHb` is 0.08093. The p-value is not statistically significant, so our model suggests that `feedback` does not impact the probability of the first outcome occurring in Gamble B, `pHb`. However if this was statistically significant we would state that there is an increase in the probability of the first outcome occurring in Gamble A, `pHb` based on `Feedback` because the coefficient is positive. Specifically, we would states that the feedback group has a 1.084 times the odds of the non-feedback groups of getting the probability of the first outcome occurring in Gamble A, `pHa`.
 
 ```{r, warning=F, message=F}
 # create logistic regression model for feedback and pHa
@@ -326,7 +322,7 @@ tbl_regression(Bfeedback_model)
 #(e^=0.08093=1.08429) CALCULATING ODDS RATIO
 ```
 
-The logistic regression plot below shows `pHa` on the x-axis and Feedback on the y-axis, grouped by `Feedback` and colored by the levels of `Feedback`. It also includes a logistic regression line using the stat_smooth function with method = "glm" and family = "binomial". It visualizes the relationship between the `Feedback` (predictor variable) and the the binary outcome variable of `pHa`. The data spread is evenly distributed and not significantly different indicating that `feedback` levels of true and false do not impact the probability of the first outcome occurring in Option A, `pHa`.
+The logistic regression plot below shows `pHa` on the x-axis and Feedback on the y-axis, grouped by `Feedback` and colored by the levels of `Feedback`. It also includes a logistic regression line using the stat_smooth function with method = "glm" and family = "binomial". It visualizes the relationship between the `Feedback` (predictor variable) and the the binary outcome variable of `pHa`. The data spread is evenly distributed and not significantly different indicating that `feedback` levels of true and false do not impact the probability of the first outcome occurring in Gamble A, `pHa`.
 
 ```{r, warning=F, message=F, fig.height=2.5}
 # create logistic regression plot
@@ -354,7 +350,7 @@ corr_matrix <- cor(choices_continuous)
 corr_matrix
 ```
 
-In the correlation matrix plot below, the probabilities of the outcomes in Option A are correlated, as well as the probabilities of the outcomes in Option B. For example, `pHa` and `La` have a linear relationship, just as `Hb`, `pHb`, and `Lb` have a linear relationship. Therefore we can conclude that the probabilities of receiving the first or second outcome within a gamble are correlated.
+In the correlation matrix plot below, the probabilities of the outcomes in Gamble A are correlated, as well as the probabilities of the outcomes in Gamble B. For example, `pHa` and `La` have a linear relationship, just as `Hb`, `pHb`, and `Lb` have a linear relationship. Therefore we can conclude that the probabilities of receiving the first or second outcome within a gamble are correlated.
 
 ```{r, warning=F, message=F, fig.height=5}
 # Create a correlation matrix plot using the "corrplot" package
@@ -364,84 +360,46 @@ corrplot(corr_matrix, method = "circle", type = "upper",
          title = "Pairwise correlations between continuous variables")
 ```
 
-In the heat map below, the darker colors signify a father coefficient from 0, and the lighter the shade of blue, the closer a coefficient is to zero. For example, the darkest squares have a coefficient of 1 and and they demonstrate a strong linear relationship between the continuous variables and themselves: pHb-pHb, Ha-Ha, pHa-pHa, Corr-Corr, bRate-bRate, Hb-Hb, Lb-Lb and La-La. Next, there are linear relationships between pHb, Hb, and Lb. And linear relationships between pHa and Ha which all demonstrate that the probability distributions of the first and second outcome in each Option A or B are associated.
+In the heat map below, the darker colors signify a father coefficient from 0, and the lighter the shade of blue, the closer a coefficient is to zero. For example, the darkest squares have a coefficient of 1 and and they demonstrate a strong linear relationship between the continuous variables and themselves: pHb-pHb, Ha-Ha, pHa-pHa, Corr-Corr, bRate-bRate, Hb-Hb, Lb-Lb and La-La. Next, there are linear relationships between pHb, Hb, and Lb. And linear relationships between pHa and Ha which all demonstrate that the probability distributions of the first and second outcome in each Gamble A or B are associated.
 
 ```{r, warning=F, message=F, fig.height=5}
 palette = colorRampPalette(c("blue", "lightblue", "navy")) (20)
 heatmap(x = corr_matrix, col = palette, symm = TRUE)
 ```
 
-# \*\*PROF. DUTT :
-
-I do not have a `Choice` variable so I cannot run these code. If I should create a `Choice` variable using the z-score pointers you gave me how would I do this?
-
-```{r, warning=F, message=F}
-# # Fit a logistic regression model to predict choice (0 = A, 1 = B) based on Hpa
-# Hpa_model <- glm(Choice ~ pHa, data = choices_df, family = binomial())
-# # Print the model summary
-# summary(Hpa_model)
-```
-
-```{r, warning=F, message=F}
-# # Fit a logistic regression model to predict choice (0 = A, 1 = B) based on Hpb
-# Hpb_model <- glm(Choice ~ pHb, data = choices_df, family = binomial())
-# # Print the model summary
-# summary(Hpb_model)
-```
-
-### [**Probability Density Plot:**]{.underline}
-
-```{r, warning=F, message=F}
-# Assuming you  ave a logistic regression model "logit_model" predicting the binary outcome variable "choice"
-# # Extract the predicted probabilities for each choice
-# probs <- predict(logit_model, type = "response")
-# 
-# # Create a density plot for each choice
-# ggplot(data.frame(probs = probs, choice = choice), aes(x = probs, fill = choice)) +
-#   geom_density(alpha = 0.5) +
-#   scale_fill_manual(values = c("#F8766D", "#00BFC4"), name = "Choice") +
-# #   xlab("Predicted probability") +
-# #   ylab("Density") +
-#   ggtitle("Distribution of predicted probabilities for each choice")
-```
-
-### [**Heat Map:**]{.underline}
-
-```{r, warning=F, message=F}
-# Assuming you have a data frame "df" with two categorical variables "feedback" and "choice"
-# Use the "table" function to create a contingency table of frequencies
-# freq_table <- table(df$feedback, df$choice)
-# 
-# # Create a heat map using the "ggplot2" package
-# ggplot(data.frame(freq_table), aes(x = Var1, y = Var2, fill = Freq)) +
-#   geom_tile() +
-#   scale_fill_gradient(low = "#FFFFFF", high = "#0072B2") +
-#   xlab("Feedback") +
-#   ylab("Choice") +
-#   ggtitle("Heat map of frequencies by feedback and choice")
-```
+\newpage
 
 # Discussion
 
-In this project, I investigated the research question, How do the participant's responses to the risky-choice problem contrast with known probabilities (certainty) versus unknown probabilities (ambiguity and lottery)? I hypothesized there will be at least one difference in the average rate of choosing either Option A or Option B depending on `Feedback`, whether the participant received feedback on the outcome of their variable. I also hypothesized there will be at least one difference in the average rate of choosing either Option A or B depending on `Amb`, whether or not the decision-maker received complete information about the probabilities of the outcomes in Option B. Therefore the true difference between the group means would not equal zero because each average Choice rate for Options A or B would contrast. I tested this research question using a t-test and One Way ANOVA to determine whether there are any statistically significant differences between the means. Then used a box-plot to visualize the averages across the different levels of `Amb` and `feedback`.
+In this project, I investigated the research question, How do the participant's responses to the risky-choice problem contrast with known probabilities (certainty) versus unknown probabilities (ambiguity and lottery)? I hypothesized there will be at least one difference in the average rate of choosing either Gamble A or Gamble B depending on `Feedback`, whether the participant received feedback on the outcome of their variable. I also hypothesized there will be at least one difference in the average rate of choosing either Gamble A or B depending on `Amb`, whether or not the decision-maker received complete information about the probabilities of the outcomes in Gamble B. Therefore the true difference between the group means would not equal zero because the average choice rate for Gamble A or B would contrast. I tested this research question using a t-test and One Way ANOVA to determine whether there are any statistically significant differences between the means. Then used a box-plot to visualize the averages across the different levels of `Amb` and `feedback`.
 
-Unfortunately, my data has various limitations such as being unable to identify the choice rate for Option A. The data included `bRate` which was the frequency with which participants selected Option B, however there was not a variable that measured the frequency with which participants Option A. Instead, there were numerous probabilities variables such as `Ha`, `pHa`, `La`, `Hb`, `pHb`, and `Lb` which represented the probabilities of the first, expected, or lottery outcomes from occurring in Options A or B. Because there was no variable measuring the the frequency with which participants selected Option A, I could only run the t-test and One Way Anova for `bRate` based on the `Amb` and `Feedback`. Therefore I had to change my research question since I could only test Option B. My new research question became,
+Unfortunately, my data had various limitations such only having the frequency choice rate for one option, Gamble B. The data included `bRate` which was the frequency with which participants selected Gamble B, however there was not a variable that measured the frequency with which participants Gamble A. Instead, there were numerous probabilities variables such as `Ha`, `pHa`, `La`, `Hb`, `pHb`, and `Lb` which represented the probabilities of the first, expected, or lottery outcomes from occurring in Gamble A or B. Because there was no variable measuring the the frequency with which participants selected Gamble A, I could only run the t-test and One Way Anova for `bRate` based on the `Amb` and `Feedback` being the risk-seeking option. Therefore I had to change my research question since I could only test Gamble B.
 
-How do the participant's responses to the risky-choice problem contrast with known probabilities (certainty) versus unknown probabilities (ambiguity and lottery)
+My new research question became, How do the participant's responses to the Gamble B risky-choice problem, with unknown probabilities (ambiguity and lottery), contrast when the participant receives the feedback (`Feedback)` or information (`Amb`) treatment.
 
-Loss aversion effect
+I utilized a t-test and ANOVA to assess if there was a statistically significant difference between the mean **`bRate`** \[the frequency of choosing Gamble B\] between the the true and false groups of whether the participants received **`Feedback`**. True indicates they received on the outcomes of the variable and false indicates they did not. The t-test failed to reject the null hypothesis, so the difference between mean score of participant's choice of `bRate` remain constant despite the treatment level of `Feedback` provided. Therefore, the mean frequency rate of choosing Gamble B, `bRate` would be the same regardless of the **`Feedback`** about the outcome. Additionally, the ANOVA demonstrates that we have a small F-statistic of 0.1354635 we do not have statistically significant evidence that the `bRate` differs by `Feedback` level. In conclusion, we do not have a main effect for `Feedback` on `bRate`.
 
-https://oriplonsky.com/wp-content/uploads/2017/09/Erev-et-al-2017.pdf
+I also utilized an ANOVA and t-test to assess if there was a statistically significant difference between the mean **`bRate`** between the the true and false groups of `Amb`, whether or not the decision-maker gets complete information about the probabilities of the outcomes in Gamble B. Where 0 indicates complete information so it is True and 1 indicates no information so it is False. The t-test rejected the null hypothesis, so there is at least one different mean score of participant's choice of `bRate` that occurs due to the treatment level of information of `Amb` provided. Therefore, the mean frequency rate of choosing Gamble B, `bRate` depends on the `Amb` about the probability of the outcome. Additionally, the ANOVA demonstrates that we have a large F-statistic of 112.4, so we have statistically significant evidence that the `bRate` differs by information level or `Amb`. In conclusion, we have a main effect for `Amb` on `bRate`.
 
-Explain what your results mean in the context of the literature cited in the introduction. Minimum of 750 words.\] What machine learning will mean for asset managers and the future of investing. <https://hbr.org/2019/12/what-machine-learning-will-mean-for-asset-managers> 
+The results of testing the `Amb` treatment reinforces the literature insights about the loss aversion effect within behavioral finance, our dopamine reward system and emotions. Thereby showing how neuroscience, psychology, and biology can explain why receiving no information or complete information about the probabilities of the outcomes (`Feedback`) in Gamble B presents statistically significant evidence in impacting the frequency of choosing Gamble B (`bRate`).
+
+The loss aversion effect is a pain avoidance framework characterized by strong emotions such as anxiety, stress, and fear. Because Gamble B deals with more unknown probabilities (ambiguity and lottery) than Gamble A with known probabilities, the loss aversion framework is more likely to ignite in the gamble for Gamble B. This framework considers loss to be more painful than the chances of getting pleasure during uncertainty, and ultimately perceives the losses to be forms of punishment. Therefore in the context of information levels for `Amb`, individuals are more likely to fear the false option with no information provided about the probabilities of the outcomes of Gamble B, when compared to the true option with complete information. Individuals that are impacted stronger by the loss aversion framework than the pleasure seeking framework may notice that they tend to observe their setbacks more than their progress. Kahneman also describes their losses to hurt twice as much as their gains. Loss aversion shapes higher sensitivity to loss in comparison to risk-averse individuals that are less sensitive to choosing under uncertainty.
+
+The dopamine reward system is a crucial system that drives behavior toward pleasurable stimuli and steers us away from painful stimuli. For example, we will repeat actions that we have associated with a positive stimulus. This system therefore values our emotions and uses it as a predictor of whether we will reinforce the stimulus by repeating or discontinuing the action that produced said consequence. Because the dopamine reward system operates on dopamine, a neurochemical that mediate pleasure, our emotions are strongly correlated to our decision-making. In addition to emotions, decision-making uses rationale and evidence to develop their judgement and stronger evidence about the outputs depending on the information levels provided will also provided what choices are made under uncertainty about Gamble B. In conclusion although `feedback` level did not have statistically significant evidence for impacting the frequency rate with which participants chose Gamble B, information level or `Amb` did have statistically significant evidence of impacting the average `bRate`.
+
+\newpage
 
 # Future Directions
 
-How could someone continue the work? Around 150-200 words.\] fMRI can show which brain regions and neural activity specifically visualized dopamine reward pathways . <https://www.pnas.org/doi/10.1073/pnas.0606297104> 
+How could someone continue the work? Around 150-200 words.\] fMRI can show which brain regions and neural activity specifically visualized dopamine reward pathways <https://www.pnas.org/doi/10.1073/pnas.0606297104> 
+
+What machine learning will mean for asset managers and the future of investing. <https://hbr.org/2019/12/what-machine-learning-will-mean-for-asset-managers> 
 
 # Personal Reflections
 
-\[What was your original research question? Why did you have to deviate? What ideal dataset would be recommended for collecting? How was this process of developing a research paper? 250 words\]. **WHY FINANCIAL RISK: risk and ambiguity, volatility, Statistics, and Probability; Decision theory, general equilibrium theory**
+\[What was your original research question? Why did you have to deviate? What ideal data set would be recommended for collecting? How was this process of developing a research paper? 250 words\].
+
+**WHY FINANCIAL RISK: risk and ambiguity, volatility, Statistics, and Probability; Decision theory, general equilibrium theory**
 
 # Code Availability
 
@@ -449,4 +407,4 @@ All analysis code for this article is available on GitHub at, [SDS 300 Investiga
 
 # Acknowledgements
 
-I would like to thank Professor Dutt for her feedback throughout the course. I would like to thank Celebrating Collaborations for allowing me to present on this platform. I would like to thank the professors in the Statistical and Data Science department that have previously taught the materials about statistical tests to prepare me for this seminar.
+I would like to thank Professor Dutt for her feedback throughout the course. I would like to thank Celebrating Collaborations for allowing me to present my preliminary findings. I would like to thank the professors in the Statistical and Data Science department that have previously taught the materials about statistical tests to prepare me for this seminar.
