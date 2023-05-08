@@ -10,9 +10,9 @@ date: "`r Sys.Date()`"
 
 # Abstract
 
-What characteristics influences the decision-making process that occurs behind our money management and can a better understand of these natural and social phenomenons improve our finances? In this project, I investigated risk decisions and the implications for financial professionals such as investors, traders, or brokers. I am using the Choices13K dataset, an open data source retrieved from GitHub that is among the largest human decision response on risk-choice problems datasets with at least 13,000 responses. In this study, the participants participated in a series of experiments where they faced two options to gamble: a risk-averse or risk-seeking option. Each option had a different set of possible outcomes. For example, if they chose Option A, there was a certain probability of a 100% chance of a \$0 return (risk-averse); however, if they chose Option B, there was a lottery outcome with a. 50-50% chance of winning or losing \$100 (risk-seeking). My research question studies if and how participants' responses contrast with the risky-choice problem when there are known probabilities (certainty) versus unknown probabilities (ambiguity and lottery). 
+What characteristics influence the decision-making process behind our money management, and can a better understanding of these natural and social phenomena improve our finances? In this project, I investigated risk decisions and their implications for financial professionals such as investors, traders, or brokers. I am using the Choices13K dataset, an open data source retrieved from GitHub that is among the largest human decision response on risk-choice problems datasets with at least 13,000 responses. In this study, the participants participated in a series of experiments where they faced two options to gamble: a risk-averse or risk-seeking option. Each option had a different set of possible outcomes. For example, if they chose Option A, there was a certain probability of a 100% chance of a \$0 return (risk-averse); however, if they chose Option B, there was a lottery outcome with a. 50-50% chance of winning or losing \$100 (risk-seeking). My research question studies if and how participants' responses contrast with the risky-choice problem when there are known probabilities (certainty) versus unknown probabilities (ambiguity and lottery).
 
-I use neuroscience, psychology, and neurobiology to investigate the underlying biological and social mechanisms that impact decision-making and confidence in financial risk management. For the neuroscience research, I investigated how desire activates our neural reward system and dopamine system, which influences the processes for decision-making in the limbic system and neocortex. Then in the psychology discipline, I researched behavioral biases and behavioral finance protocols under the CFA (Chartered Financial Analyst non-profit) to observe how emotions and pleasure-seeking approach vs. loss aversion approach impact decision-making. And lastly, in my research within the neurobiology field, I studied interoceptive abilities and genetics, such as testosterone, and how the levels of each explain the nuances of financial decision-making. In my methodology, I perform a t-test, logistic regression, and multiple logistic regression to respond to my research question.
+I use neuroscience, psychology, and neurobiology to investigate the underlying biological and social mechanisms that impact decision-making and confidence in financial risk management. For the neuroscience research, I investigated how desire activates our neural reward system and dopamine system, which influences the processes for decision-making in the limbic system and neocortex. Then in the psychology discipline, I researched behavioral biases and behavioral finance protocols under the CFA (Chartered Financial Analyst non-profit) to observe how emotions and pleasure-seeking approach vs. loss aversion approach impact decision-making. And lastly, in my research within the neurobiology field, I studied interoceptive abilities and genetics, such as testosterone, and how the levels of each explain the nuances of financial decision-making. In my methodology, I perform a t-test, logistic regression, and a correlation matrix to respond to my research question.
 
 # Introduction
 
@@ -373,16 +373,16 @@ heatmap(x = corr_matrix, col = palette, symm = TRUE)
 
 # \*\*PROF. DUTT :
 
-I do not have a `Choice` variable so I cannot run this code. If I should create a `Choice` variable using the z-score pointers you gave me how would I do this?
+I do not have a `Choice` variable so I cannot run these code. If I should create a `Choice` variable using the z-score pointers you gave me how would I do this?
 
-```{r, echo=FALSE, warning=F, message=F}
+```{r, warning=F, message=F}
 # # Fit a logistic regression model to predict choice (0 = A, 1 = B) based on Hpa
 # Hpa_model <- glm(Choice ~ pHa, data = choices_df, family = binomial())
 # # Print the model summary
 # summary(Hpa_model)
 ```
 
-```{r, echo=FALSE, warning=F, message=F}
+```{r, warning=F, message=F}
 # # Fit a logistic regression model to predict choice (0 = A, 1 = B) based on Hpb
 # Hpb_model <- glm(Choice ~ pHb, data = choices_df, family = binomial())
 # # Print the model summary
@@ -423,9 +423,25 @@ I do not have a `Choice` variable so I cannot run this code. If I should create 
 
 # Discussion
 
+In this project, I investigated the research question, How do the participant's responses to the risky-choice problem contrast with known probabilities (certainty) versus unknown probabilities (ambiguity and lottery)? I hypothesized there will be at least one difference in the average rate of choosing either Option A or Option B depending on `Feedback`, whether the participant received feedback on the outcome of their variable. I also hypothesized there will be at least one difference in the average rate of choosing either Option A or B depending on `Amb`, whether or not the decision-maker received complete information about the probabilities of the outcomes in Option B. Therefore the true difference between the group means would not equal zero because each average Choice rate for Options A or B would contrast. I tested this research question using a t-test and One Way ANOVA to determine whether there are any statistically significant differences between the means. Then used a box-plot to visualize the averages across the different levels of `Amb` and `feedback`.
+
+Unfortunately, my data has various limitations such as being unable to identify the choice rate for Option A. The data included `bRate` which was the frequency with which participants selected Option B, however there was not a variable that measured the frequency with which participants Option A. Instead, there were numerous probabilities variables such as `Ha`, `pHa`, `La`, `Hb`, `pHb`, and `Lb` which represented the probabilities of the first, expected, or lottery outcomes from occurring in Options A or B. Because there was no variable measuring the the frequency with which participants selected Option A, I could only run the t-test and One Way Anova for `bRate` based on the `Amb` and `Feedback`. Therefore I had to change my research question since I could only test Option B. My new research question became,
+
+How do the participant's responses to the risky-choice problem contrast with known probabilities (certainty) versus unknown probabilities (ambiguity and lottery)
+
+Loss aversion effect
+
+https://oriplonsky.com/wp-content/uploads/2017/09/Erev-et-al-2017.pdf
+
+Explain what your results mean in the context of the literature cited in the introduction. Minimum of 750 words.\] What machine learning will mean for asset managers and the future of investing. <https://hbr.org/2019/12/what-machine-learning-will-mean-for-asset-managers> 
+
 # Future Directions
 
+How could someone continue the work? Around 150-200 words.\] fMRI can show which brain regions and neural activity specifically visualized dopamine reward pathways . <https://www.pnas.org/doi/10.1073/pnas.0606297104> 
+
 # Personal Reflections
+
+\[What was your original research question? Why did you have to deviate? What ideal dataset would be recommended for collecting? How was this process of developing a research paper? 250 words\]. **WHY FINANCIAL RISK: risk and ambiguity, volatility, Statistics, and Probability; Decision theory, general equilibrium theory**
 
 # Code Availability
 
