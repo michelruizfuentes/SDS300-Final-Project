@@ -444,3 +444,5 @@ All analysis code for this article is available on GitHub at, [SDS 300 Investiga
 # Acknowledgements
 
 I would like to thank Professor Dutt for her support and patience throughout this seminar and research design. I want to thank the Celebrating Collaborations committee for allowing me to present my preliminary findings and gain experience sharing my literature and statistical methods with an audience. Third, I would like to thank the professors in the Statistical and Data Science department that have me previously and have prepared me for this seminar. And lastly, I would like to thank my family and friends.
+
+# References
