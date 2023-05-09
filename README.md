@@ -17,3 +17,8 @@ How do the participant's responses to the Gamble B risky-choice problem, with un
 The alternative hypothesis states at least one different mean score of participants' choice Gamble B (bRate) depending on whether they receive feedback or information about the outcomes of the variables. The true difference between the group means would contrast and therefore not include zero to indicate the means vary based on the treatment provided, the treatment being the feedback or information levels. 
 
 Based on the literature, I support the alternative hypothesis and believe there will be a difference in the mean score of participant's choice of Gamble B (bRate) depending on the treatment and level provided: whether they receive Feedback (receive or did not receive) or Amb (none or complete information). Kahneman and Tversky's research on decision-making and risk perception indicates that the feedback and perception used to frame risky-choice problems influence the participant's choice. For example, if one gamble was framed positively for having a gain outcome, the subject preferred a risk-averse option. On the other hand, if another gamble was prepared negatively for potential loss, the subject preferred a risk-seeking option.
+
+## Acknowledgements
+
+I would like to thank Professor Dutt for her support and patience throughout this seminar and research design. I want to thank the Celebrating Collaborations committee for allowing me to present my preliminary findings and gain experience sharing my literature and statistical methods with an audience. Third, I would like to thank the professors in the Statistical and Data Science department that have me previously and have prepared me for this seminar. And lastly, I would like to thank my family and friends.
+
