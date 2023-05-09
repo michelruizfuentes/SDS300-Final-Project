@@ -283,7 +283,7 @@ cat("p-value =", p_value, "\n")
 
 ### [**Condition Checks for `bRate` and `Amb`:**]{.underline}
 
-[**Symmetrical Distribution around Group Means**]{.underline}:
+#### [**Symmetrical Distribution around Group Means**]{.underline}:
 
 The box-plot below shows us the distribution of the average `bRate` on the different levels of `Amb` of true or false which represent whether participants received complete or no information about their gambles before choosing the gamble. We will compare the variation in the interquartile ranges of each treatment. We can see that this condition is not violated, when looking at the spread in the false and true group are the same. There is also an absence of outliers so we have not violated these normality assumptions.
 
@@ -302,7 +302,7 @@ bRate_Amb <-
 bRate_Amb
 ```
 
-[**Constant Variance:**]{.underline}
+#### [**Constant Variance:**]{.underline}
 
 After conducting Levene's test of homogeneity of variance, we see that our p-value of 0.5232 is greater than 0.05. This means that we do not have statistically significant evidence that we have different variances; therefore constant variance condition is not violated. Thus, Levene's test indicates that the condition of equality of variances has homogeneity, so each level of information, false and true, has the same variance.
 
