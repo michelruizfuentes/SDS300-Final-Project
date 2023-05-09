@@ -324,11 +324,11 @@ tbl_regression(Afeedback_model)
 #(e^0.01387 = 1.01396) CALCULATING ODDS RATIO
 ```
 
-The logistic regression plot below shows `pHb` on the x-axis and `Feedback` on the y-axis, grouped by `Feedback` and colored by the levels of `Feedback`. It also includes a logistic regression line using the stat_smooth function with method = "glm" and family = "binomial." Finally, it visualizes the relationship between the `Feedback` (predictor variable) and the binary outcome variable of `pHa`. The data spread is evenly distributed and not significantly different, indicating that true and false feedback levels do not impact the probability of the first outcome occurring in Gamble A, `pHa`.
+The logistic regression plot below shows `pHa` on the x-axis and `Feedback` on the y-axis, grouped by `Feedback` and colored by the levels of `Feedback`. It also includes a logistic regression line using the stat_smooth function with method = "glm" and family = "binomial." Finally, it visualizes the relationship between the `Feedback` (predictor variable) and the binary outcome variable of `pHa`. The data spread is evenly distributed and not significantly different, indicating that true and false feedback levels do not impact the probability of the first outcome occurring in Gamble A, `pHa`.
 
 ```{r, warning=F, message=F, fig.height=2.5}
 # create logistic regression plot
-ggplot(choices_df, aes(x = pHb, y = Feedback)) +
+ggplot(choices_df, aes(x = pHa, y = Feedback)) +
   geom_point(aes(color = as.factor(Feedback)), size = 2.5) +
   stat_smooth(method = "glm", method.args = 
                 list(family = "binomial"),  
@@ -356,7 +356,7 @@ The logistic regression plot below shows `pHb` on the x-axis and Feedback on the
 
 ```{r, warning=F, message=F, fig.height=2.5}
 # create logistic regression plot
-ggplot(choices_df, aes(x = pHa, y = Feedback)) +
+ggplot(choices_df, aes(x = pHb, y = Feedback)) +
   geom_point(aes(color = as.factor(Feedback)), size = 2.5) +
   stat_smooth(method = "glm", method.args = 
                 list(family = "binomial"),  
@@ -366,6 +366,8 @@ ggplot(choices_df, aes(x = pHa, y = Feedback)) +
       caption ="source: Choices13K") + 
   scale_color_manual(values = c("#00BFC4", "#F8766D")) 
 ```
+
+\newpage
 
 ### [**Correlation:**]{.underline}
 
@@ -380,6 +382,8 @@ corr_matrix <- cor(choices_continuous)
 corr_matrix
 ```
 
+\newpage
+
 In the correlation matrix plot below, the probabilities of the outcomes in Gamble A are correlated, as well as the probabilities of the outcomes in Gamble B. For example, `pHa` and `La` have a linear relationship, just as `Hb`, `pHb`, and `Lb` have a linear relationship. Therefore we can conclude that the probabilities of receiving the first or second outcome within a gamble are correlated.
 
 ```{r, warning=F, message=F, fig.height=5}
@@ -389,6 +393,8 @@ corrplot(corr_matrix, method = "circle", type = "upper",
          addCoef.col = "black", number.cex = 0.8, tl.cex = 0.8,
          title = "Pairwise correlations between continuous variables")
 ```
+
+\newpage
 
 In the heat map below, the darker colors signify a father coefficient from 0, and the lighter the shade of blue, the closer a coefficient is to zero. For example, the darkest squares have a coefficient of 1 and and they demonstrate a strong linear relationship between the continuous variables and themselves: `pHb`-`pHb`, `Ha`-`Ha`, `pHa`-`pHa`, `Corr`-`Corr`, `bRate`-`bRate`, `Hb`-`Hb`, `Lb`-`Lb` and `La`-`La`. Next, there are linear relationships between `pHb`, `Hb`, and `Lb`, and a linear relationships between `pHa` and `Ha` which all demonstrate that the probability distributions of the first and second outcome in each Gamble A or B are associated.
 
@@ -439,7 +445,7 @@ I enjoyed developing a research project and methodology to surround a topic that
 
 # Code Availability
 
-All analysis code for this article is available on GitHub at, [SDS 300 Investigating the Impact of Monetary Rewards on Choice Behavior, Decision Making and Risk Management](https://github.com/michelruizfuentes/SDS300-Final-Project)
+All code for this Final Project is available on GitHub at, [SDS 300 Investigating the Impact of Monetary Rewards on Choice Behavior, Decision Making and Risk Management](https://github.com/michelruizfuentes/SDS300-Final-Project)
 
 # Acknowledgements
 
