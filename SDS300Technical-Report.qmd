@@ -447,4 +447,4 @@ I would like to thank Professor Dutt for her support and patience throughout thi
 
 # References
 
-Attached as the `SDS300BIBLO.rtf` in the folder.
+Attached as the `SDS300BIBLO.rtf` in the `SDS300-Final-Project` folder.
